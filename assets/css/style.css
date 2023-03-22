@@ -1,0 +1,1381 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+@font-face {
+  font-family: "Vazirmatn";
+  src: url("../fonts/webfonts/Vazirmatn[wght].woff2") format("woff2 supports variations"), url("../fonts/webfonts/Vazirmatn[wght].woff2") format("woff2-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  direction: rtl;
+  font-family: Vazirmatn;
+  box-sizing: border-box;
+}
+
+ul,
+li,
+a {
+  margin: 0;
+  padding: 0;
+}
+
+.reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal.active, #navigation .navContainer .nav .nav-ul li .reveal:hover {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+#topBtn a {
+  position: fixed;
+  bottom: -100px;
+  right: 30px;
+  font-size: 60px;
+  transition: all 0.3s ease;
+  color: #202c45;
+  z-index: 101;
+}
+#topBtn a:hover {
+  color: #1196CC;
+}
+
+#title {
+  background-color: #202c45;
+}
+#title .titleContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 70%;
+  margin: auto;
+}
+#title .titleContainer .contact {
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+}
+#title .titleContainer .contact .items {
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+  padding: 10px;
+}
+#title .titleContainer .contact .items img {
+  width: 20px;
+  filter: invert(100%);
+}
+#title .titleContainer .contact .items p {
+  color: #fff;
+  padding: 0 10px;
+  margin: 0;
+}
+#title .titleContainer .social {
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+}
+#title .titleContainer .social .appoint a {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  background-color: #1196CC;
+  padding: 20px 60px;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+#navigation {
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+#navigation .search-box {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 100;
+  text-align: center;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+#navigation .search-box img {
+  width: 25px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  filter: invert(70%);
+  transition: all 0.5s ease;
+}
+#navigation .search-box img:hover {
+  filter: invert(0%);
+}
+#navigation .search-box input {
+  padding: 30px;
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+  border: none;
+  outline: none;
+}
+#navigation .navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 70%;
+  margin: auto;
+  padding: 20px 0;
+}
+#navigation .navContainer .nav {
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+}
+#navigation .navContainer .nav .bars {
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+}
+#navigation .navContainer .nav .bars .searchBar {
+  padding: 10px 10px 0 10px;
+}
+#navigation .navContainer .nav .bars .searchBar img {
+  width: 30px;
+  vertical-align: baseline;
+}
+#navigation .navContainer .nav .bars .barBtn {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  display: none;
+}
+#navigation .navContainer .nav .nav-ul {
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+  transition: height 0.5s all;
+  margin: 0;
+}
+#navigation .navContainer .nav .nav-ul li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  transition: all 0.5s ease;
+}
+#navigation .navContainer .nav .nav-ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  margin: 0;
+  font-size: 20px;
+  padding: 10px 20px;
+}
+#navigation .navContainer .nav .nav-ul li .active, #navigation .navContainer .nav .nav-ul li :hover {
+  background-color: #202c45;
+  border-radius: 30px;
+  color: #fff;
+}
+#navigation .navContainer .logo {
+  width: 50px;
+  height: 50px;
+}
+#navigation .navContainer .logo img {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.sliderContainer {
+  position: relative;
+}
+
+#info {
+  position: relative;
+}
+#info .info {
+  position: absolute;
+  top: -150px;
+}
+#info .info .rowInfo {
+  max-width: 80%;
+  margin: auto;
+}
+#info .info .rowInfo .topDoc {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 40px;
+  background-color: #202c45;
+  color: #fff;
+}
+#info .info .rowInfo .topDoc p.bodyText {
+  margin-top: 20px;
+}
+#info .info .rowInfo .topDoc button {
+  background-color: #202c45;
+  color: #fff;
+  padding: 10px 30px;
+  border: 3px solid #fff;
+  border-radius: 30px;
+  margin-top: 30px;
+  transition: all 0.5s ease;
+  font-size: 20px;
+}
+#info .info .rowInfo .topDoc button:hover {
+  background-color: #fff;
+  color: black;
+  box-shadow: 0 0 20px 3px #fff;
+}
+#info .info .rowInfo .wt {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  background-color: #1196CC;
+  color: #fff;
+  padding: 40px;
+}
+#info .info .rowInfo .wt .workOut {
+  margin-top: 30px;
+  width: 100%;
+}
+#info .info .rowInfo .wt .workOut .workItems {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#info .info .rowInfo .wt button {
+  padding: 10px 30px;
+  background-color: transparent;
+  border: 3px solid #fff;
+  border-radius: 30px;
+  margin-top: 23px;
+  color: #fff;
+  transition: all 0.5s ease;
+}
+#info .info .rowInfo .wt button:hover {
+  background-color: #fff;
+  color: black;
+  box-shadow: 0 0 20px 3px #fff;
+}
+#info .info .rowInfo .service {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 40px;
+  color: #fff;
+  background-color: #202c45;
+}
+#info .info .rowInfo .service button {
+  background-color: #202c45;
+  color: #fff;
+  padding: 10px 30px;
+  border: 3px solid #fff;
+  border-radius: 30px;
+  margin-top: 30px;
+  transition: all 0.5s ease;
+}
+#info .info .rowInfo .service button:hover {
+  background-color: #fff;
+  color: black;
+  box-shadow: 0 0 20px 3px #fff;
+}
+#info .info .rowInfo .contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 40px;
+  color: #fff;
+  background-color: #1196CC;
+}
+#info .info .rowInfo .contact button {
+  padding: 10px 30px;
+  background-color: transparent;
+  border: 3px solid #fff;
+  border-radius: 30px;
+  margin-top: 10px;
+  color: #fff;
+  transition: all 0.5s ease;
+}
+#info .info .rowInfo .contact button:hover {
+  background-color: #fff;
+  color: black;
+  box-shadow: 0 0 20px 3px #fff;
+}
+
+#weCare .weCareContainer {
+  margin-top: 300px;
+  margin-bottom: 100px;
+}
+#weCare .weCareContainer .weCareContent {
+  max-width: 70%;
+  margin: auto;
+}
+#weCare .weCareContainer .weCareContent .weCareImg {
+  padding: 0;
+  width: 35%;
+}
+#weCare .weCareContainer .weCareContent .weCareImg img {
+  width: 100%;
+  height: 100%;
+}
+#weCare .weCareContainer .weCareContent .weCareText {
+  width: 65%;
+  padding-right: 30px;
+}
+#weCare .weCareContainer .weCareContent .weCareText p {
+  font-size: 20px;
+  padding: 20px 0;
+}
+#weCare .weCareContainer .weCareContent .weCareText .hologram img {
+  width: 80px;
+  margin: 0 10px;
+}
+#weCare .weCareContainer .weCareContent .weCareText button {
+  border: none;
+  margin-top: 30px;
+  padding: 15px 30px;
+  border-radius: 30px;
+  background-color: #202c45;
+  color: #fff;
+  font-size: 20px;
+  transition: all 0.5s ease;
+}
+#weCare .weCareContainer .weCareContent .weCareText button:hover {
+  background-color: #1196CC;
+}
+
+#certificate {
+  background-color: #eee;
+  padding: 80px 0;
+}
+#certificate .cerSwiper {
+  max-width: 70%;
+  margin: auto;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#service {
+  padding: 100px 0;
+}
+#service .serviceContainer {
+  max-width: 70%;
+  margin: auto;
+}
+#service .serviceContainer .serviceTitle {
+  text-align: center;
+}
+#service .serviceContainer .serviceTitle img {
+  padding: 10px;
+}
+#service .serviceContainer .serviceTitle p {
+  color: gray;
+  font-size: 20px;
+}
+#service .serviceContainer .serviceContent {
+  margin: 70px 0;
+}
+#service .serviceContainer .serviceContent .servItems {
+  display: flex;
+  justify-content: stretch;
+  align-items: flex-start;
+  padding: 40px;
+}
+#service .serviceContainer .serviceContent .servItems:hover .servIcon {
+  transform: rotateY(180deg);
+  transition: all 0.5s ease;
+}
+#service .serviceContainer .serviceContent .servItems .servIcon {
+  width: 70px;
+  height: 70px;
+  padding: 15px;
+  border-radius: 50%;
+  background-color: #1196CC;
+  text-align: center;
+}
+#service .serviceContainer .serviceContent .servItems .servIcon img {
+  width: 100%;
+}
+#service .serviceContainer .serviceContent .servItems .servText {
+  width: 85%;
+  padding-right: 20px;
+  padding-top: 10px;
+}
+#service .serviceContainer .serviceContent .servItems .servText p {
+  margin-top: 15px;
+  color: gray;
+  text-align: justify;
+  font-size: 18px;
+}
+
+#smile {
+  background-image: url("../img/smile.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+#smile .smileContainer {
+  text-align: center;
+  padding: 150px 0;
+  background-color: rgba(32, 44, 69, 0.8431372549);
+  margin: auto;
+}
+#smile .smileContainer .smileContent {
+  max-width: 70%;
+  margin: auto;
+}
+#smile .smileContainer .smileContent .rowItems {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+#smile .smileContainer .smileContent .rowItems img {
+  width: 70px;
+  filter: invert(100%);
+}
+#smile .smileContainer .smileContent .rowItems h2 {
+  padding-top: 20px;
+}
+
+#depertment {
+  background-color: #f8f8f8;
+  padding: 100px 0;
+}
+#depertment .depContainer {
+  max-width: 70%;
+  margin: auto;
+}
+#depertment .depContainer .depTitle {
+  text-align: center;
+}
+#depertment .depContainer .depTitle img {
+  padding: 10px;
+}
+#depertment .depContainer .depTitle p {
+  color: gray;
+  font-size: 20px;
+  text-align: center;
+}
+#depertment .depContainer .depContent {
+  margin-top: 50px;
+}
+#depertment .depContainer .depContent .depRow {
+  padding: 20px;
+  background-color: #fff;
+  margin: 15px;
+  width: calc(33.33% - 30px);
+}
+#depertment .depContainer .depContent .depRow .depItems img {
+  width: 100%;
+}
+#depertment .depContainer .depContent .depRow .depItems h4 {
+  padding: 10px 0;
+}
+#depertment .depContainer .depContent .depRow .depItems p {
+  color: gray;
+}
+#depertment .depContainer .depContent .depRow .depItems button {
+  padding: 15px 30px;
+  border-radius: 10px;
+  border: none;
+  background-color: #202c45;
+  color: #fff;
+  transition: all 0.5s ease;
+}
+#depertment .depContainer .depContent .depRow .depItems button:hover {
+  background-color: #1196CC;
+}
+
+#dentist {
+  padding: 100px 0;
+}
+#dentist .dentistContainer {
+  max-width: 70%;
+  margin: auto;
+}
+#dentist .dentistContainer .dentistTitle {
+  text-align: center;
+}
+#dentist .dentistContainer .dentistTitle img {
+  padding: 10px;
+}
+#dentist .dentistContainer .dentistTitle p {
+  color: gray;
+  font-size: 20px;
+}
+#dentist .dentistContainer .dentistContent {
+  margin-top: 50px;
+}
+#dentist .dentistContainer .dentistContent .dentistSwiper .dentistSlide {
+  background-color: #eee;
+}
+#dentist .dentistContainer .dentistContent .dentistSwiper .dentistSlide h4 {
+  margin-top: 15px;
+}
+#dentist .dentistContainer .dentistContent .dentistSwiper .dentistSlide p {
+  color: #1196CC;
+  font-size: 14px;
+}
+#dentist .dentistContainer .dentistContent .dentistSwiper .dentistSlide .dent-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10px;
+}
+#dentist .dentistContainer .dentistContent .dentistSwiper .dentistSlide .dent-social img {
+  width: 30px;
+  margin: 8px;
+}
+
+#price {
+  background-color: #f8f8f8;
+  padding: 100px 0;
+}
+#price .priceContainer {
+  max-width: 70%;
+  margin: auto;
+}
+#price .priceContainer .priceItems {
+  text-align: center;
+}
+#price .priceContainer .priceItems img {
+  padding: 10px;
+}
+#price .priceContainer .priceItems p {
+  color: gray;
+  font-size: 20px;
+}
+#price .priceContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#price .priceContent .price-rowItems {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid #1196CC;
+  width: calc(33.33% - 40px);
+  margin: 20px;
+  flex-direction: column;
+  padding: 40px;
+  background-color: #fff;
+  transition: all 0.5s ease;
+}
+#price .priceContent .price-rowItems .priceIcons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1196CC;
+  width: 80px;
+  height: 80px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+#price .priceContent .price-rowItems .priceIcons img {
+  width: 100%;
+}
+#price .priceContent .price-rowItems h3 {
+  margin: 10px;
+}
+#price .priceContent .price-rowItems h2 {
+  margin: 20px;
+  font-weight: bold;
+}
+#price .priceContent .price-rowItems p.bodyText {
+  color: gray;
+  margin: 10px 0 20px 0;
+  text-align: justify;
+  font-size: 16px;
+}
+#price .priceContent .price-rowItems button {
+  padding: 10px 70px;
+  border: none;
+  background-color: #1196CC;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 15px;
+  margin: 40px 0 0 20px;
+}
+#price .priceContent .price-rowItems:hover {
+  transform: translateY(-20px);
+}
+
+#contact {
+  background-image: url("../img/smile.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+#contact .conactContainer {
+  background-color: rgba(32, 44, 69, 0.8431372549);
+}
+#contact .conactContainer .contact-content {
+  max-width: 70%;
+  text-align: center;
+  padding: 150px 0;
+  margin: auto;
+  color: #fff;
+}
+#contact .conactContainer .contact-content .call {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#contact .conactContainer .contact-content .call img {
+  width: 35px;
+  margin: 0;
+  padding: 0;
+  filter: invert(100%);
+}
+#contact .conactContainer .contact-content .call h2 {
+  margin: 0;
+  padding: 20px 10px 10px 10px;
+}
+#contact .conactContainer .contact-content h2 {
+  padding: 10px;
+}
+#contact .conactContainer .contact-content p {
+  padding: 20px;
+}
+#contact .conactContainer .contact-content button {
+  padding: 20px 60px;
+  border: none;
+  background-color: #1196CC;
+  margin-top: 20px;
+  color: #fff;
+  border-radius: 30px;
+  transition: all 0.5s ease;
+}
+#contact .conactContainer .contact-content button:hover {
+  box-shadow: 0 0 20px 3px #fff;
+}
+
+#news {
+  padding: 100px 0;
+  transition: all 0.5s ease;
+}
+#news .newsContainer {
+  max-width: 70%;
+  margin: auto;
+}
+#news .newsContainer .newstitle {
+  text-align: center;
+}
+#news .newsContainer .newstitle img {
+  padding: 10px;
+}
+#news .newsContainer .newstitle p {
+  color: gray;
+  font-size: 20px;
+}
+#news .newsContainer .newsContent {
+  margin-top: 100px;
+}
+#news .newsContainer .newsContent .newsSlide {
+  background-color: #eee;
+}
+#news .newsContainer .newsContent .newsSlide .slideItems {
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+  flex-direction: column;
+}
+#news .newsContainer .newsContent .newsSlide .slideItems .newsComment {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #202c45;
+  color: #fff;
+  padding: 10px;
+  width: 100%;
+}
+#news .newsContainer .newsContent .newsSlide .slideItems .newsComment div {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#news .newsContainer .newsContent .newsSlide .slideItems .newsComment div img {
+  width: 15px;
+  filter: invert(100%);
+}
+#news .newsContainer .newsContent .newsSlide .slideItems .newsComment div p {
+  padding: 0;
+  margin: 5px 5px 0 5px;
+}
+#news .newsContainer .newsContent .newsSlide .slideItems .newsBody {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+#news .newsContainer .newsContent .newsSlide .slideItems .newsBody h4 {
+  padding: 20px 0;
+}
+#news .newsContainer .newsContent .newsSlide .slideItems .newsBody p {
+  font-size: 14px;
+  color: gray;
+  text-align: justify;
+}
+#news .newsContainer .newsContent .newsSlide .slideItems .newsBtn {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+}
+#news .newsContainer .newsContent .newsSlide .slideItems .newsBtn button {
+  padding: 15px 30px;
+  border: none;
+  background-color: #202c45;
+  color: #fff;
+  border-radius: 20px;
+  transition: all 0.5s ease;
+}
+#news .newsContainer .newsContent .newsSlide .slideItems .newsBtn button:hover {
+  background-color: #1196CC;
+}
+
+#client {
+  background-color: #1196CC;
+}
+#client .clientSwiper {
+  max-width: 70%;
+  text-align: center;
+}
+#client .clientSwiper .clientSlide {
+  background-color: #1196CC;
+}
+
+#footer {
+  padding: 100px 0;
+  background-color: #202c45;
+}
+#footer .footerContainer {
+  max-width: 70%;
+  margin: auto;
+}
+#footer .footerContainer .footerAbout {
+  padding: 30px;
+  color: #fff;
+}
+#footer .footerContainer .footerAbout h2 {
+  font-size: 40px;
+  font-weight: 900;
+}
+#footer .footerContainer .footerAbout p {
+  font-size: 16px;
+  color: gray;
+}
+#footer .footerContainer .footerAbout .footerSocial {
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+}
+#footer .footerContainer .footerAbout .footerSocial img {
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+}
+#footer .footerExplor {
+  color: #fff;
+  padding: 30px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+#footer .footerExplor .export-uls {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+#footer .footerExplor .export-uls ul {
+  flex-direction: column;
+}
+#footer .footerExplor .export-uls ul li {
+  color: gray;
+  padding: 10px 20px;
+  list-style-type: "<";
+}
+#footer .footerExplor .export-uls ul li:hover {
+  color: #1196CC;
+}
+#footer .footerExplor .export-uls ul li a {
+  text-decoration: none;
+  color: gray;
+}
+#footer .footerNews {
+  padding: 30px;
+  color: #fff;
+}
+#footer .footerNews .newsItems {
+  padding: 10px 0;
+}
+#footer .footerNews .newsItems .newsContent {
+  margin: 20px 0;
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+}
+#footer .footerNews .newsItems .newsContent img {
+  width: 80px;
+  height: 80px;
+}
+#footer .footerNews .newsItems .newsContent .linkNews {
+  padding: 10px 20px;
+}
+#footer .footerNews .newsItems .newsContent .linkNews p {
+  color: gray;
+  line-height: 0.5px;
+}
+#footer .footerNews .newsItems .newsContent .linkNews a {
+  font-size: 14;
+  color: #fff;
+  text-decoration: none;
+}
+#footer .footerContact {
+  padding: 30px;
+  color: #fff;
+}
+#footer .footerContact .footerItems {
+  color: gray;
+  padding: 20px 0;
+}
+#footer .footerContact .footerItems div {
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+  padding: 8px 0;
+}
+#footer .footerContact .footerItems div img {
+  width: 20px;
+  filter: invert(70%);
+}
+#footer .footerContact .footerItems div p {
+  margin: 0;
+  padding: 0 10px;
+}
+
+@media screen and (max-width: 600px) {
+  #title .titleContainer {
+    max-width: 100%;
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+    flex-direction: column;
+  }
+  #title .titleContainer .contact {
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+    flex-direction: column;
+    padding: 10px;
+  }
+  #title .titleContainer .social {
+    padding: 10px;
+  }
+  #navigation .navContainer {
+    max-width: 100%;
+  }
+  #navigation .navContainer .logo {
+    position: absolute;
+    top: 30px;
+    left: 5px;
+  }
+  #navigation .navContainer .nav {
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+  #navigation .navContainer .nav .bars .barBtn {
+    display: block;
+    margin-right: 10px;
+  }
+  #navigation .navContainer .nav .nav-ul {
+    background-color: #202c45;
+    margin-top: 10px;
+    padding: 0;
+    display: flex;
+    justify-content: stretch;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    height: 0px;
+    overflow: hidden;
+  }
+  #navigation .navContainer .nav .nav-ul li {
+    width: 100%;
+    border-bottom: 1px solid #1196CC;
+  }
+  #navigation .navContainer .nav .nav-ul li a {
+    width: 100%;
+    border-radius: 0;
+    color: #fff;
+  }
+  #navigation .navContainer .nav .nav-ul li a:hover {
+    color: #1196CC;
+  }
+  #info .info {
+    position: static;
+  }
+  #info .info .rowInfo {
+    max-width: 100%;
+  }
+  #weCare .weCareContainer {
+    margin-top: 100px;
+  }
+  #weCare .weCareContainer .weCareContent {
+    max-width: 90%;
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+    flex-direction: column;
+  }
+  #weCare .weCareContainer .weCareContent .weCareImg {
+    width: 100%;
+  }
+  #weCare .weCareContainer .weCareContent .weCareText {
+    width: 100%;
+    margin-top: 20px;
+    padding: 0;
+  }
+  #service .serviceContainer {
+    max-width: 100%;
+  }
+  #depertment .depContainer {
+    max-width: 90%;
+  }
+  #depertment .depContainer .depContent .depRow {
+    margin: 40px 20px;
+    width: calc(100% - 40px);
+  }
+  #dentist .dentistContainer {
+    max-width: 90%;
+  }
+  #price .priceContainer {
+    max-width: 100%;
+  }
+  #price .priceContent .price-rowItems {
+    width: calc(100% - 70px);
+    margin: 20px 35px;
+  }
+  #price .priceContent .price-rowItems button {
+    padding: 10px 60px;
+  }
+  #footer .footerContainer {
+    max-width: 100%;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 768px) {
+  #title .titleContainer {
+    max-width: 100%;
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+    flex-direction: column;
+  }
+  #title .titleContainer .contact {
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+    flex-direction: column;
+    padding: 10px;
+  }
+  #title .titleContainer .social {
+    padding: 10px;
+  }
+  #navigation .navContainer {
+    max-width: 100%;
+  }
+  #navigation .navContainer .logo {
+    position: absolute;
+    top: 30px;
+    left: 5px;
+  }
+  #navigation .navContainer .nav {
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+  #navigation .navContainer .nav .bars .barBtn {
+    display: block;
+    margin-right: 10px;
+  }
+  #navigation .navContainer .nav .nav-ul {
+    background-color: #202c45;
+    margin-top: 10px;
+    padding: 0;
+    display: flex;
+    justify-content: stretch;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    height: 0px;
+    overflow: hidden;
+  }
+  #navigation .navContainer .nav .nav-ul li {
+    width: 100%;
+    border-bottom: 1px solid #1196CC;
+  }
+  #navigation .navContainer .nav .nav-ul li a {
+    width: 100%;
+    border-radius: 0;
+    color: #fff;
+  }
+  #navigation .navContainer .nav .nav-ul li a:hover {
+    color: #1196CC;
+  }
+  #info .info {
+    position: static;
+  }
+  #info .info .rowInfo {
+    max-width: 100%;
+  }
+  #weCare .weCareContainer {
+    margin-top: 100px;
+  }
+  #weCare .weCareContainer .weCareContent {
+    max-width: 90%;
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+    flex-direction: column;
+  }
+  #weCare .weCareContainer .weCareContent .weCareImg {
+    width: 100%;
+  }
+  #weCare .weCareContainer .weCareContent .weCareText {
+    width: 100%;
+    margin-top: 20px;
+    padding: 0;
+  }
+  #service .serviceContainer {
+    max-width: 90%;
+  }
+  #service .serviceContainer .serviceContent .servItems {
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+    flex-direction: column;
+  }
+  #service .serviceContainer .serviceContent .servItems .servText {
+    padding: 20px 0;
+  }
+  #depertment .depContainer {
+    max-width: 90%;
+  }
+  #depertment .depContainer .depContent .depRow {
+    margin: 20px;
+    width: calc(100% - 40px);
+  }
+  #dentist .dentistContainer {
+    max-width: 85%;
+  }
+  #price .priceContainer {
+    max-width: 90%;
+  }
+  #price .priceContent .price-rowItems {
+    width: calc(100% - 70px);
+    margin: 20px 35px;
+  }
+  #price .priceContent .price-rowItems button {
+    padding: 10px 60px;
+  }
+  #footer .footerContainer {
+    max-width: 100%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  #title .titleContainer {
+    max-width: 100%;
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+    flex-direction: column;
+  }
+  #title .titleContainer .contact {
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+    flex-direction: column;
+    padding: 10px;
+  }
+  #title .titleContainer .social {
+    padding: 10px;
+  }
+  #navigation .navContainer {
+    max-width: 100%;
+  }
+  #navigation .navContainer .logo {
+    position: absolute;
+    top: 30px;
+    left: 5px;
+  }
+  #navigation .navContainer .nav {
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+  #navigation .navContainer .nav .bars .barBtn {
+    display: block;
+    margin-right: 10px;
+  }
+  #navigation .navContainer .nav .nav-ul {
+    background-color: #202c45;
+    margin-top: 10px;
+    padding: 0;
+    display: flex;
+    justify-content: stretch;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    height: 0px;
+    overflow: hidden;
+  }
+  #navigation .navContainer .nav .nav-ul li {
+    width: 100%;
+    border-bottom: 1px solid #1196CC;
+  }
+  #navigation .navContainer .nav .nav-ul li a {
+    width: 100%;
+    border-radius: 0;
+    color: #fff;
+  }
+  #navigation .navContainer .nav .nav-ul li a:hover {
+    color: #1196CC;
+  }
+  #info .info {
+    position: static;
+  }
+  #info .info .rowInfo {
+    max-width: 100%;
+  }
+  #weCare .weCareContainer {
+    margin-top: 100px;
+  }
+  #weCare .weCareContainer .weCareContent {
+    max-width: 90%;
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+    flex-direction: column;
+  }
+  #weCare .weCareContainer .weCareContent .weCareImg {
+    width: 100%;
+  }
+  #weCare .weCareContainer .weCareContent .weCareText {
+    width: 100%;
+    margin-top: 20px;
+    padding: 0;
+  }
+  #service .serviceContainer {
+    max-width: 90%;
+  }
+  #service .serviceContainer .serviceContent .servItems {
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+    flex-direction: column;
+  }
+  #service .serviceContainer .serviceContent .servItems .servText {
+    padding: 20px 0;
+  }
+  #depertment .depContainer {
+    max-width: 90%;
+  }
+  #depertment .depContainer .depContent .depRow {
+    margin: 20px;
+    width: calc(100% - 40px);
+  }
+  #dentist .dentistContainer {
+    max-width: 85%;
+  }
+  #price .priceContainer {
+    max-width: 85%;
+  }
+  #price .priceContent .price-rowItems {
+    width: calc(100% - 70px);
+    margin: 20px 35px;
+  }
+  #price .priceContent .price-rowItems button {
+    padding: 10px 60px;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  #title .titleContainer {
+    max-width: 100%;
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+    flex-direction: column;
+  }
+  #title .titleContainer .contact {
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+    flex-direction: column;
+    padding: 10px;
+  }
+  #title .titleContainer .social {
+    padding: 10px;
+  }
+  #navigation .navContainer {
+    max-width: 100%;
+  }
+  #info .info {
+    position: static;
+  }
+  #info .info .rowInfo {
+    max-width: 100%;
+  }
+  #info .info .rowInfo .topDoc {
+    background-color: #1196CC;
+  }
+  #info .info .rowInfo .topDoc button {
+    background-color: transparent;
+  }
+  #info .info .rowInfo .wt {
+    background-color: #202c45;
+  }
+  #service .serviceContainer {
+    max-width: 90%;
+  }
+  #service .serviceContainer .serviceContent .servItems {
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+    flex-direction: column;
+  }
+  #service .serviceContainer .serviceContent .servItems .servText {
+    padding: 20px 0;
+  }
+  #dentist .dentistContainer {
+    max-width: 85%;
+  }
+  #price .priceContainer {
+    max-width: 70%;
+  }
+  #price .priceContent .price-rowItems {
+    width: calc(100% - 70px);
+    margin: 20px 35px;
+  }
+  #price .priceContent .price-rowItems button {
+    padding: 10px 60px;
+  }
+}
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+  #info .info {
+    position: static;
+  }
+  #info .info .rowInfo {
+    max-width: 100%;
+  }
+  #info .info .rowInfo .topDoc {
+    background-color: #1196CC;
+  }
+  #info .info .rowInfo .topDoc button {
+    background-color: transparent;
+  }
+  #info .info .rowInfo .wt {
+    background-color: #202c45;
+  }
+  #service .serviceContainer {
+    max-width: 80%;
+  }
+  #service .serviceContainer .serviceContent .servItems {
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+    flex-direction: column;
+  }
+  #service .serviceContainer .serviceContent .servItems .servText {
+    padding: 20px 0;
+  }
+  #dentist .dentistContainer {
+    max-width: 83%;
+  }
+  #price .priceContainer {
+    max-width: 85%;
+  }
+  #price .priceContent .price-rowItems {
+    width: calc(50% - 70px);
+    margin: 20px 35px;
+  }
+  #price .priceContent .price-rowItems button {
+    padding: 10px 60px;
+  }
+}/*# sourceMappingURL=style.css.map */

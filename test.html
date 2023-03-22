@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            direction: rtl;
+        }
+        #header{
+            position: relative;
+            
+        }
+        
+        .slider-container {
+            height: 100vh;
+            /* background-color: yellow; */
+        }
+
+        .img-slider {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .img-slider .slide {
+            position: absolute;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            /* clip-path: circle(0% at 0 50%); */
+            opacity: 0;
+        }
+
+        .img-slider .slide.active {
+            /* clip-path: circle(150% at 0 50%); */
+            opacity: 1;
+            transition: 3s;
+            transition-property: opacity;
+        }
+
+
+        .img-slider .slide img {
+            width: 100%;
+            height: 100%;
+        }
+
+
+        .img-slider .slide .info.left {
+            position: absolute;
+            top: 150px;
+            left: 300px;
+        }
+
+        .img-slider .slide .info.right {
+            position: absolute;
+            top: 150px;
+            right: 300px;
+        }
+
+        .img-slider .slide .info .more-info {
+            background-color: #202c45;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 20px;
+            margin-top: 20px;
+            border: none;
+
+        }
+
+        .img-slider .slide .info .contact-us {
+            background-color: #fff;
+            color: #202c45;
+            padding: 10px 20px;
+            font-size: 20px;
+            margin-top: 20px;
+            border: none;
+            margin-right: 10px;
+        }
+
+        .img-slider .slide .info h1 {
+            color: #fff;
+            font-size: 60px;
+            font-weight: 800;
+
+        }
+
+        .img-slider .slide .info h1 span {
+            color: #202c45;
+        }
+
+        .img-slider .slide .info p {
+            font-size: 20px;
+            color: #fff;
+            background: rgba(0, 0, 0, 0.1);
+            width: 60%;
+            padding: 10px;
+            border-radius: 4px;
+        }
+
+        .img-slider .navigation {
+            position: absolute;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            top: 50%;
+            right: 30px;
+            transform: translateY(-50%);
+        }
+
+        .img-slider .navigation .btn {
+            background: rgba(0, 102, 255, 0.5);
+            width: 20px;
+            height: 20px;
+            margin: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 2px solid #202c45;
+        }
+
+        .img-slider .navigation .btn.active {
+            background-color: #202c45;
+            border: 2px solid rgba(0, 102, 255, 0.5);
+            ;
+
+        }
+
+        @media screen and (max-width: 600px) {
+            .slider-container {
+                height: 400px;
+            }
+
+
+
+            .img-slider .navigation .btn {
+                width: 12px;
+                height: 12px;
+                margin: 5px;
+            }
+
+            .img-slider .slide .info.left {
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .img-slider .slide .info.right {
+                top: 50%;
+                right: 50%;
+                transform: translate(50%, -50%);
+            }
+
+
+            .img-slider .slide .info h1 {
+                font-size: 30px;
+            }
+
+            .img-slider .slide .info .info_btn {
+                display: flex;
+            }
+
+            .img-slider .slide .info .more-info {
+                background-color: #202c45;
+                color: #fff;
+                padding: 10px 20px;
+                font-size: 16px;
+                margin-top: 20px;
+                border: none;
+            }
+
+            .img-slider .slide .info .contact-us {
+                background-color: #fff;
+                color: #202c45;
+                padding: 10px 20px;
+                font-size: 16px;
+                margin-top: 20px;
+                border: none;
+                margin-right: 10px;
+            }
+        }
+
+        @media screen and (min-width:600px) and (max-width: 768px) {
+            .slider-container {
+                height: 500px;
+            }
+
+
+
+            .img-slider .navigation .btn {
+                width: 12px;
+                height: 12px;
+                margin: 5px;
+            }
+
+            .img-slider .slide .info.left {
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .img-slider .slide .info.right {
+                top: 50%;
+                right: 50%;
+                transform: translate(50%, -50%);
+            }
+
+
+            .img-slider .slide .info h1 {
+                font-size: 30px;
+            }
+
+            .img-slider .slide .info .info_btn {
+                display: flex;
+            }
+
+            .img-slider .slide .info .more-info {
+                background-color: #202c45;
+                color: #fff;
+                padding: 10px 20px;
+                font-size: 16px;
+                margin-top: 20px;
+                border: none;
+
+            }
+
+            .img-slider .slide .info .contact-us {
+                background-color: #fff;
+                color: #202c45;
+                padding: 10px 20px;
+                font-size: 16px;
+                margin-top: 20px;
+                border: none;
+                margin-right: 10px;
+            }
+
+        }
+        @media screen and (min-width:768px) and (max-width: 992px) {
+            .slider-container {
+                height: 500px;
+            }
+
+
+
+            .img-slider .navigation .btn {
+                width: 12px;
+                height: 12px;
+                margin: 5px;
+            }
+
+            .img-slider .slide .info.left {
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .img-slider .slide .info.right {
+                top: 50%;
+                right: 50%;
+                transform: translate(50%, -50%);
+            }
+
+
+            .img-slider .slide .info h1 {
+                font-size: 60px;
+            }
+
+            .img-slider .slide .info .info_btn {
+                display: flex;
+            }
+
+            .img-slider .slide .info .more-info {
+                background-color: #202c45;
+                color: #fff;
+                padding: 10px 20px;
+                font-size: 20px;
+                margin-top: 20px;
+                border: none;
+
+            }
+
+            .img-slider .slide .info .contact-us {
+                background-color: #fff;
+                color: #202c45;
+                padding: 10px 20px;
+                font-size: 20px;
+                margin-top: 20px;
+                border: none;
+                margin-right: 10px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <section id="header">
+        <div class="slider-container">
+            <div class="img-slider">
+                <div class="slide active">
+                    <img src="assets/img/slider1.jpg" alt="">
+                    <div class="info left">
+                        <h1 id="h-t" class="animate__animated animate__fadeInDownBig">ارایه بهترین <span>خدمات</span>
+                            <br>
+                            دندانپزشکی</h1>
+                        <div class="info_btn">
+                            <button class="more-info animate__animated animate__fadeInDown animate__delay-1s">بیشتر
+                                بدانید</button>
+                            <button class="contact-us animate__animated animate__fadeInLeft animate__delay-1s">تماس با
+                                ما</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="assets/img/slider2.jpg" alt="">
+                    <div class="info right">
+                        <h1 id="h-t">ارایه بهترین <span>خدمات</span> <br> دندانپزشکی</h1>
+                        <div class="info_btn">
+                            <button class="more-info">بیشتر بدانید</button>
+                            <button class="contact-us">تماس با ما</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="navigation">
+                    <div class="btn active"></div>
+                    <div class="btn"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

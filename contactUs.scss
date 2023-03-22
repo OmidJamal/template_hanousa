@@ -1,0 +1,801 @@
+$baseColor: #202c45;
+$whiteColor: #fff;
+$blueColor: #1196CC;
+$normalFontSize: 20px;
+
+
+
+// Font face created -- (Vazirmatn)
+@font-face {
+    font-family: 'Vazirmatn';
+    src: url('../fonts/webfonts/Vazirmatn[wght].woff2') format('woff2 supports variations'),
+        url('../fonts/webfonts/Vazirmatn[wght].woff2') format('woff2-variations');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+// Creat mixin for flex box
+@mixin flexBox($display, $justifyContent, $alignItems) {
+    display: $display;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+    font-family: Vazirmatn;
+    box-sizing: border-box;
+}
+
+// section Title sass style 
+#title {
+    background-color: $baseColor;
+
+    .titleContainer {
+        @include flexBox(flex, space-between, center);
+        max-width: 70%;
+        margin: auto;
+
+        .contact {
+            @include flexBox(flex, stretch, center);
+
+            .items {
+                @include flexBox(flex, stretch, center);
+                padding: 10px;
+
+                img {
+                    width: 20px;
+                    filter: invert(100%);
+                }
+
+                p {
+                    color: $whiteColor;
+                    padding: 0 10px;
+                    margin: 0;
+                }
+            }
+
+        }
+
+        .social {
+            @include flexBox(flex, stretch, center);
+
+            .appoint {
+                a {
+                    display: inline-block;
+                    text-decoration: none;
+                    color: $whiteColor;
+                    background-color: $blueColor;
+                    padding: 20px 60px;
+
+                    font: {
+                        size: $normalFontSize;
+                    }
+
+                    ;
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+}
+
+// Nvigation Section sass style
+#navigation {
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    box-shadow: 0px 2px 15px rgb(0 0 0 / 10%);
+    background-color: $whiteColor;
+    .search-box {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        background-color: $whiteColor;
+        z-index: 99;
+        text-align: center;
+        height: 0;
+        overflow: hidden;
+        transition: all .5s ease;
+
+        img {
+            width: 25px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            filter: invert(70%);
+            transition: all .5s ease;
+
+            &:hover {
+                filter: invert(0%);
+            }
+        }
+
+        input {
+            padding: 30px;
+            width: 100%;
+            text-align: center;
+            font-size: 30px;
+            border: none;
+            outline: none;
+        }
+    }
+
+    .navContainer {
+        @include flexBox(flex, space-between, center);
+        max-width: 70%;
+        margin: auto;
+        padding: 20px 0;
+
+        .nav {
+            @include flexBox(flex, stretch, center);
+
+            .bars {
+                @include flexBox(flex, stretch, center);
+
+                .searchBar {
+                    // background-color: yellow;
+                    padding: 10px 10px 0 10px;
+
+                    img {
+                        width: 30px;
+                        vertical-align: baseline;
+                    }
+                }
+
+                .barBtn {
+                    width: 30px;
+                    height: 30px;
+                    cursor: pointer;
+                    background-color: transparent;
+                    border: none;
+                    display: none;
+                }
+            }
+
+            .nav-ul {
+                @include flexBox(flex, stretch, center);
+                transition: height .5s all;
+                margin: 0;
+
+                li {
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+
+
+                    a {
+                        display: inline-block;
+                        text-decoration: none;
+                        color: black;
+                        margin: 0;
+
+                        font: {
+                            size: $normalFontSize;
+                        }
+
+                        ;
+                        padding: 10px 20px;
+                    }
+
+
+                    .active {
+                        background-color: $baseColor;
+                        border-radius: 30px;
+                        color: $whiteColor;
+                    }
+
+                    :hover {
+                        @extend .active;
+                    }
+                }
+
+            }
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.contactContainer {
+    @include flexBox(flex, stretch, center);
+    flex-direction: column;
+    max-width: 80%;
+    margin: auto;
+    padding: 70px 0;
+
+    .contactText-header {
+        h3 {
+            font-size: 25px;
+            font-weight: 900;
+            color: $blueColor;
+            line-height: 0.5cm;
+        }
+    }
+
+    .contactText-detail {
+        p {
+            font-size: 32px;
+            font-weight: 600;
+            line-height: 0.9cm;
+            text-align: center;
+        }
+    }
+
+    .line {
+        width: 70px;
+        height: 3px;
+        background-color: $blueColor;
+        margin-bottom: 20px;
+    }
+
+    .contactContent {
+        @include flexBox(flex, stretch, stretch);
+        flex-wrap: wrap;
+        width: 100%;
+
+        .contentForm {
+            background-color: #fff;
+            margin: 10px;
+            width: calc(60% - 20px);
+            border-bottom: solid 3px $blueColor;
+            border-top: solid 3px $blueColor;
+            box-shadow: 0 0 15px 5px rgb(238, 238, 238);
+
+            form {
+                padding: 30px;
+
+                .user {
+                    @include flexBox(flex, stretch, stretch);
+                    .userItem {
+                        width: 50%;
+
+                        .labelUser {
+                            margin-right: 10px;
+                        }
+
+                        .inputUser {
+                            width: calc(100% - 20px);
+                            margin: 5px 10px;
+                            padding: 8px;
+                            border: solid 1px #acaaaa;
+                            outline: none;
+                        }
+                    }
+
+                }
+
+                .labelUser {
+                    margin-right: 10px;
+                }
+
+                .Subject {
+                    width: calc(100% - 20px);
+                    margin: 5px 10px;
+                    padding: 8px;
+                    border: solid 1px #acaaaa;
+                    outline: none;
+
+                }
+
+                .message {
+                    width: calc(100% - 20px);
+                    margin: 5px 10px;
+                    padding: 8px;
+                    border: solid 1px #acaaaa;
+                    outline: none;
+                }
+
+                div {
+                    text-align: center;
+
+                    .send {
+                        width: 150px;
+                        margin: 10px auto 40px auto;
+                        color: #fff;
+                        background-color: $blueColor;
+                        padding: 10px;
+                        font-size: 18px;
+                        border: none;
+                        border-radius: 5px;
+                        transition: all .5s ease;
+                        &:hover{
+                            background-color: #202c45;
+                        }
+                    }
+                }
+            }
+        }
+
+        .contentAddress {
+            margin: 10px;
+            padding: 0 30px;
+            width: calc(40% - 20px);
+            border-bottom: solid 3px $blueColor;
+            border-top: solid 3px $blueColor;
+            box-shadow: 0 0 15px 5px rgb(223, 223, 223);
+
+            .location {
+                @include flexBox(flex, stretch, flex-start);
+                padding-top: 30px;
+
+                img {
+                    width: 20px;
+                }
+
+                .locationText {
+                    padding-right: 15px;
+
+                    p {
+                        color: #ab9d95;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+#footer {
+    padding: 100px 0;
+    background-color: $baseColor;
+
+    .footerContainer {
+        max-width: 70%;
+        margin: auto;
+
+        .footerAbout {
+            padding: 30px;
+            // background-color: #202c45;
+            color: $whiteColor;
+
+            h2 {
+                font: {
+                    size: 40px;
+                    weight: 900;
+                }
+            }
+
+            p {
+                font-size: 16px;
+                color: gray;
+            }
+
+            .footerSocial {
+                @include flexBox(flex, stretch, center);
+
+                img {
+                    width: 30px;
+                    height: 30px;
+                    margin: 5px;
+                }
+            }
+        }
+    }
+
+    .footerExplor {
+        color: $whiteColor;
+        padding: 30px;
+        @include flexBox(flex, flex-start, flex-start);
+        flex-direction: column;
+
+        .export-uls {
+            @include flexBox(flex, center, stretch);
+
+            // background-color: yellow;
+            ul {
+                flex-direction: column;
+
+                li {
+                    list-style-type: "<";
+                    color: gray;
+                    padding: 10px 20px;
+
+                    &:hover {
+                        color: #1196CC;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: gray;
+
+                    }
+                }
+            }
+
+            ;
+        }
+
+        ;
+    }
+
+    .footerNews {
+        padding: 30px;
+        color: $whiteColor;
+
+        .newsItems {
+            padding: 10px 0;
+
+            .newsContent {
+                margin: 20px 0;
+                @include flexBox(flex, stretch, stretch);
+
+                img {
+                    width: 80px;
+                    height: 80px;
+                }
+
+                .linkNews {
+                    padding: 10px 20px;
+
+                    p {
+                        color: gray;
+                        line-height: .5px;
+                    }
+
+                    a {
+                        font-size: 14;
+                        color: $whiteColor;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .footerContact {
+        padding: 30px;
+        color: $whiteColor;
+
+        .footerItems {
+            color: gray;
+            padding: 20px 0;
+
+            div {
+                @include flexBox(flex, stretch, center);
+                padding: 8px 0;
+
+                img {
+                    width: 20px;
+                    filter: invert(70%);
+                }
+
+                p {
+                    margin: 0;
+                    padding: 0 10px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #navigation {
+        position: relative;
+
+        .navContainer {
+            max-width: 100%;
+
+            .nav {
+                width: 100%;
+                @include flexBox(flex, stretch, stretch);
+                flex-direction: column;
+
+                .bars {
+                    padding: 10px;
+
+                    .barBtn {
+                        display: block;
+                    }
+                }
+
+                .nav-ul-respons {
+                    transition: height .5s all;
+                    height: 0px;
+                    overflow: hidden;
+                    margin-top: 10px;
+                    @include flexBox(flex, stretch, stretch);
+                    flex-direction: column;
+                    padding-top: 10px;
+
+                    .li-respons {
+                        width: 100%;
+                        background-color: $baseColor;
+                        border-bottom: 1px solid $blueColor;
+
+                        a {
+                            color: $whiteColor;
+                        }
+                    }
+                }
+            }
+
+            .logo {
+                position: absolute;
+                top: 30px;
+                left: 5px;
+            }
+        }
+    }
+
+    #footer {
+        .footerContainer {
+            max-width: 100%;
+        }
+    }
+
+    #title {
+        .titleContainer {
+            @include flexBox(flex, stretch, center);
+            flex-direction: column;
+            max-width: 100%;
+            padding: 10px;
+
+            .contact {
+                @include flexBox(flex, stretch, stretch);
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            .social {
+                padding: 20px;
+
+                .appoint {
+                    a {
+                        padding: 10px 60px;
+                    }
+                }
+            }
+        }
+    }
+
+    .contactContainer {
+        max-width: 100%;
+
+        .contactContent {
+            .contentForm {
+                width: calc(100% - 20px);
+            }
+
+            .contentAddress {
+                width: calc(100% - 20px);
+                form {
+                    .user {
+                        @include flexBox(flex,stretch ,stretch );
+                        .userItem{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 768px) {
+
+
+    #navigation {
+        position: relative;
+
+        .navContainer {
+            max-width: 100%;
+
+            .nav {
+                width: 100%;
+                @include flexBox(flex, stretch, stretch);
+                flex-direction: column;
+
+                .bars {
+                    padding: 10px;
+
+                    .barBtn {
+                        display: block;
+                    }
+                }
+
+                .nav-ul-respons {
+                    transition: height .5s all;
+                    height: 0px;
+                    overflow: hidden;
+                    margin-top: 10px;
+                    @include flexBox(flex, stretch, stretch);
+                    flex-direction: column;
+                    padding-top: 10px;
+
+                    .li-respons {
+                        width: 100%;
+                        background-color: $baseColor;
+                        border-bottom: 1px solid $blueColor;
+
+                        a {
+                            color: $whiteColor;
+                        }
+                    }
+                }
+            }
+
+            .logo {
+                position: absolute;
+                top: 30px;
+                left: 5px;
+            }
+        }
+    }
+
+    #footer {
+        .footerContainer {
+            max-width: 100%;
+        }
+    }
+
+    #title {
+        .titleContainer {
+            @include flexBox(flex, stretch, center);
+            flex-direction: column;
+            max-width: 100%;
+            padding: 10px;
+
+            .social {
+                padding: 20px;
+
+                .appoint {
+                    a {
+                        padding: 10px 60px;
+                    }
+                }
+            }
+        }
+    }
+
+    .contactContainer {
+        max-width: 100%;
+
+        .contactContent {
+            .contentForm {
+                width: calc(100% - 20px);
+            }
+
+            .contentAddress {
+                width: calc(100% - 20px);
+                form {
+                    .user {
+                        @include flexBox(flex,stretch ,stretch );
+                        .userItem{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+
+    #navigation {
+        position: relative;
+
+        .navContainer {
+            max-width: 100%;
+
+            .nav {
+                width: 100%;
+                @include flexBox(flex, stretch, stretch);
+                flex-direction: column;
+
+                .bars {
+                    padding: 10px;
+
+                    .barBtn {
+                        display: block;
+                    }
+                }
+
+                .nav-ul-respons {
+                    transition: height .5s all;
+                    height: 0px;
+                    overflow: hidden;
+                    margin-top: 10px;
+                    @include flexBox(flex, stretch, stretch);
+                    flex-direction: column;
+                    padding-top: 10px;
+
+                    .li-respons {
+                        width: 100%;
+                        background-color: $baseColor;
+                        border-bottom: 1px solid $blueColor;
+
+                        a {
+                            color: $whiteColor;
+                        }
+                    }
+                }
+            }
+
+            .logo {
+                position: absolute;
+                top: 30px;
+                left: 5px;
+            }
+        }
+    }
+
+    .col-md-12 {
+        width: 100%;
+    }
+
+    #title {
+        .titleContainer {
+            @include flexBox(flex, stretch, center);
+            flex-direction: column;
+            max-width: 100%;
+            padding: 10px;
+
+            .social {
+                padding: 20px;
+
+                .appoint {
+                    a {
+                        padding: 10px 60px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+
+    #navigation {
+        .navContainer {
+            max-width: 100%;
+        }
+    }
+
+    #title {
+        .titleContainer {
+            @include flexBox(flex, stretch, center);
+            flex-direction: column;
+            max-width: 100%;
+            padding: 10px;
+
+            .social {
+                padding: 20px;
+
+                .appoint {
+                    a {
+                        padding: 10px 60px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:1200px) and (max-width: 1400px) {
+
+    #navigation {
+        .navContainer {
+            max-width: 80%;
+        }
+    }
+
+}
+
+@media screen and (min-width:1400px) and (max-width:1600px) {}

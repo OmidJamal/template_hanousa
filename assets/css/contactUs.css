@@ -1,0 +1,649 @@
+@font-face {
+  font-family: "Vazirmatn";
+  src: url("../fonts/webfonts/Vazirmatn[wght].woff2") format("woff2 supports variations"), url("../fonts/webfonts/Vazirmatn[wght].woff2") format("woff2-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+* {
+  margin: 0;
+  padding: 0;
+  direction: rtl;
+  font-family: Vazirmatn;
+  box-sizing: border-box;
+}
+
+#title {
+  background-color: #202c45;
+}
+#title .titleContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 70%;
+  margin: auto;
+}
+#title .titleContainer .contact {
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+}
+#title .titleContainer .contact .items {
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+  padding: 10px;
+}
+#title .titleContainer .contact .items img {
+  width: 20px;
+  filter: invert(100%);
+}
+#title .titleContainer .contact .items p {
+  color: #fff;
+  padding: 0 10px;
+  margin: 0;
+}
+#title .titleContainer .social {
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+}
+#title .titleContainer .social .appoint a {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  background-color: #1196CC;
+  padding: 20px 60px;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+#navigation {
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+#navigation .search-box {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 99;
+  text-align: center;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+#navigation .search-box img {
+  width: 25px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  filter: invert(70%);
+  transition: all 0.5s ease;
+}
+#navigation .search-box img:hover {
+  filter: invert(0%);
+}
+#navigation .search-box input {
+  padding: 30px;
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+  border: none;
+  outline: none;
+}
+#navigation .navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 70%;
+  margin: auto;
+  padding: 20px 0;
+}
+#navigation .navContainer .nav {
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+}
+#navigation .navContainer .nav .bars {
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+}
+#navigation .navContainer .nav .bars .searchBar {
+  padding: 10px 10px 0 10px;
+}
+#navigation .navContainer .nav .bars .searchBar img {
+  width: 30px;
+  vertical-align: baseline;
+}
+#navigation .navContainer .nav .bars .barBtn {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  display: none;
+}
+#navigation .navContainer .nav .nav-ul {
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+  transition: height 0.5s all;
+  margin: 0;
+}
+#navigation .navContainer .nav .nav-ul li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#navigation .navContainer .nav .nav-ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  margin: 0;
+  font-size: 20px;
+  padding: 10px 20px;
+}
+#navigation .navContainer .nav .nav-ul li .active, #navigation .navContainer .nav .nav-ul li :hover {
+  background-color: #202c45;
+  border-radius: 30px;
+  color: #fff;
+}
+#navigation .navContainer .logo {
+  width: 50px;
+  height: 50px;
+}
+#navigation .navContainer .logo img {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.contactContainer {
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+  flex-direction: column;
+  max-width: 80%;
+  margin: auto;
+  padding: 70px 0;
+}
+.contactContainer .contactText-header h3 {
+  font-size: 25px;
+  font-weight: 900;
+  color: #1196CC;
+  line-height: 0.5cm;
+}
+.contactContainer .contactText-detail p {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 0.9cm;
+  text-align: center;
+}
+.contactContainer .line {
+  width: 70px;
+  height: 3px;
+  background-color: #1196CC;
+  margin-bottom: 20px;
+}
+.contactContainer .contactContent {
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.contactContainer .contactContent .contentForm {
+  background-color: #fff;
+  margin: 10px;
+  width: calc(60% - 20px);
+  border-bottom: solid 3px #1196CC;
+  border-top: solid 3px #1196CC;
+  box-shadow: 0 0 15px 5px rgb(238, 238, 238);
+}
+.contactContainer .contactContent .contentForm form {
+  padding: 30px;
+}
+.contactContainer .contactContent .contentForm form .user {
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+}
+.contactContainer .contactContent .contentForm form .user .userItem {
+  width: 50%;
+}
+.contactContainer .contactContent .contentForm form .user .userItem .labelUser {
+  margin-right: 10px;
+}
+.contactContainer .contactContent .contentForm form .user .userItem .inputUser {
+  width: calc(100% - 20px);
+  margin: 5px 10px;
+  padding: 8px;
+  border: solid 1px #acaaaa;
+  outline: none;
+}
+.contactContainer .contactContent .contentForm form .labelUser {
+  margin-right: 10px;
+}
+.contactContainer .contactContent .contentForm form .Subject {
+  width: calc(100% - 20px);
+  margin: 5px 10px;
+  padding: 8px;
+  border: solid 1px #acaaaa;
+  outline: none;
+}
+.contactContainer .contactContent .contentForm form .message {
+  width: calc(100% - 20px);
+  margin: 5px 10px;
+  padding: 8px;
+  border: solid 1px #acaaaa;
+  outline: none;
+}
+.contactContainer .contactContent .contentForm form div {
+  text-align: center;
+}
+.contactContainer .contactContent .contentForm form div .send {
+  width: 150px;
+  margin: 10px auto 40px auto;
+  color: #fff;
+  background-color: #1196CC;
+  padding: 10px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  transition: all 0.5s ease;
+}
+.contactContainer .contactContent .contentForm form div .send:hover {
+  background-color: #202c45;
+}
+.contactContainer .contactContent .contentAddress {
+  margin: 10px;
+  padding: 0 30px;
+  width: calc(40% - 20px);
+  border-bottom: solid 3px #1196CC;
+  border-top: solid 3px #1196CC;
+  box-shadow: 0 0 15px 5px rgb(223, 223, 223);
+}
+.contactContainer .contactContent .contentAddress .location {
+  display: flex;
+  justify-content: stretch;
+  align-items: flex-start;
+  padding-top: 30px;
+}
+.contactContainer .contactContent .contentAddress .location img {
+  width: 20px;
+}
+.contactContainer .contactContent .contentAddress .location .locationText {
+  padding-right: 15px;
+}
+.contactContainer .contactContent .contentAddress .location .locationText p {
+  color: #ab9d95;
+}
+
+#footer {
+  padding: 100px 0;
+  background-color: #202c45;
+}
+#footer .footerContainer {
+  max-width: 70%;
+  margin: auto;
+}
+#footer .footerContainer .footerAbout {
+  padding: 30px;
+  color: #fff;
+}
+#footer .footerContainer .footerAbout h2 {
+  font-size: 40px;
+  font-weight: 900;
+}
+#footer .footerContainer .footerAbout p {
+  font-size: 16px;
+  color: gray;
+}
+#footer .footerContainer .footerAbout .footerSocial {
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+}
+#footer .footerContainer .footerAbout .footerSocial img {
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+}
+#footer .footerExplor {
+  color: #fff;
+  padding: 30px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+#footer .footerExplor .export-uls {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+#footer .footerExplor .export-uls ul {
+  flex-direction: column;
+}
+#footer .footerExplor .export-uls ul li {
+  list-style-type: "<";
+  color: gray;
+  padding: 10px 20px;
+}
+#footer .footerExplor .export-uls ul li:hover {
+  color: #1196CC;
+}
+#footer .footerExplor .export-uls ul li a {
+  text-decoration: none;
+  color: gray;
+}
+#footer .footerNews {
+  padding: 30px;
+  color: #fff;
+}
+#footer .footerNews .newsItems {
+  padding: 10px 0;
+}
+#footer .footerNews .newsItems .newsContent {
+  margin: 20px 0;
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+}
+#footer .footerNews .newsItems .newsContent img {
+  width: 80px;
+  height: 80px;
+}
+#footer .footerNews .newsItems .newsContent .linkNews {
+  padding: 10px 20px;
+}
+#footer .footerNews .newsItems .newsContent .linkNews p {
+  color: gray;
+  line-height: 0.5px;
+}
+#footer .footerNews .newsItems .newsContent .linkNews a {
+  font-size: 14;
+  color: #fff;
+  text-decoration: none;
+}
+#footer .footerContact {
+  padding: 30px;
+  color: #fff;
+}
+#footer .footerContact .footerItems {
+  color: gray;
+  padding: 20px 0;
+}
+#footer .footerContact .footerItems div {
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+  padding: 8px 0;
+}
+#footer .footerContact .footerItems div img {
+  width: 20px;
+  filter: invert(70%);
+}
+#footer .footerContact .footerItems div p {
+  margin: 0;
+  padding: 0 10px;
+}
+
+@media screen and (max-width: 600px) {
+  #navigation {
+    position: relative;
+  }
+  #navigation .navContainer {
+    max-width: 100%;
+  }
+  #navigation .navContainer .nav {
+    width: 100%;
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+    flex-direction: column;
+  }
+  #navigation .navContainer .nav .bars {
+    padding: 10px;
+  }
+  #navigation .navContainer .nav .bars .barBtn {
+    display: block;
+  }
+  #navigation .navContainer .nav .nav-ul-respons {
+    transition: height 0.5s all;
+    height: 0px;
+    overflow: hidden;
+    margin-top: 10px;
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+    flex-direction: column;
+    padding-top: 10px;
+  }
+  #navigation .navContainer .nav .nav-ul-respons .li-respons {
+    width: 100%;
+    background-color: #202c45;
+    border-bottom: 1px solid #1196CC;
+  }
+  #navigation .navContainer .nav .nav-ul-respons .li-respons a {
+    color: #fff;
+  }
+  #navigation .navContainer .logo {
+    position: absolute;
+    top: 30px;
+    left: 5px;
+  }
+  #footer .footerContainer {
+    max-width: 100%;
+  }
+  #title .titleContainer {
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+    flex-direction: column;
+    max-width: 100%;
+    padding: 10px;
+  }
+  #title .titleContainer .contact {
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+    flex-direction: column;
+    padding: 20px;
+  }
+  #title .titleContainer .social {
+    padding: 20px;
+  }
+  #title .titleContainer .social .appoint a {
+    padding: 10px 60px;
+  }
+  .contactContainer {
+    max-width: 100%;
+  }
+  .contactContainer .contactContent .contentForm {
+    width: calc(100% - 20px);
+  }
+  .contactContainer .contactContent .contentAddress {
+    width: calc(100% - 20px);
+  }
+  .contactContainer .contactContent .contentAddress form .user {
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+  }
+  .contactContainer .contactContent .contentAddress form .user .userItem {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 768px) {
+  #navigation {
+    position: relative;
+  }
+  #navigation .navContainer {
+    max-width: 100%;
+  }
+  #navigation .navContainer .nav {
+    width: 100%;
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+    flex-direction: column;
+  }
+  #navigation .navContainer .nav .bars {
+    padding: 10px;
+  }
+  #navigation .navContainer .nav .bars .barBtn {
+    display: block;
+  }
+  #navigation .navContainer .nav .nav-ul-respons {
+    transition: height 0.5s all;
+    height: 0px;
+    overflow: hidden;
+    margin-top: 10px;
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+    flex-direction: column;
+    padding-top: 10px;
+  }
+  #navigation .navContainer .nav .nav-ul-respons .li-respons {
+    width: 100%;
+    background-color: #202c45;
+    border-bottom: 1px solid #1196CC;
+  }
+  #navigation .navContainer .nav .nav-ul-respons .li-respons a {
+    color: #fff;
+  }
+  #navigation .navContainer .logo {
+    position: absolute;
+    top: 30px;
+    left: 5px;
+  }
+  #footer .footerContainer {
+    max-width: 100%;
+  }
+  #title .titleContainer {
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+    flex-direction: column;
+    max-width: 100%;
+    padding: 10px;
+  }
+  #title .titleContainer .social {
+    padding: 20px;
+  }
+  #title .titleContainer .social .appoint a {
+    padding: 10px 60px;
+  }
+  .contactContainer {
+    max-width: 100%;
+  }
+  .contactContainer .contactContent .contentForm {
+    width: calc(100% - 20px);
+  }
+  .contactContainer .contactContent .contentAddress {
+    width: calc(100% - 20px);
+  }
+  .contactContainer .contactContent .contentAddress form .user {
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+  }
+  .contactContainer .contactContent .contentAddress form .user .userItem {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  #navigation {
+    position: relative;
+  }
+  #navigation .navContainer {
+    max-width: 100%;
+  }
+  #navigation .navContainer .nav {
+    width: 100%;
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+    flex-direction: column;
+  }
+  #navigation .navContainer .nav .bars {
+    padding: 10px;
+  }
+  #navigation .navContainer .nav .bars .barBtn {
+    display: block;
+  }
+  #navigation .navContainer .nav .nav-ul-respons {
+    transition: height 0.5s all;
+    height: 0px;
+    overflow: hidden;
+    margin-top: 10px;
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+    flex-direction: column;
+    padding-top: 10px;
+  }
+  #navigation .navContainer .nav .nav-ul-respons .li-respons {
+    width: 100%;
+    background-color: #202c45;
+    border-bottom: 1px solid #1196CC;
+  }
+  #navigation .navContainer .nav .nav-ul-respons .li-respons a {
+    color: #fff;
+  }
+  #navigation .navContainer .logo {
+    position: absolute;
+    top: 30px;
+    left: 5px;
+  }
+  .col-md-12 {
+    width: 100%;
+  }
+  #title .titleContainer {
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+    flex-direction: column;
+    max-width: 100%;
+    padding: 10px;
+  }
+  #title .titleContainer .social {
+    padding: 20px;
+  }
+  #title .titleContainer .social .appoint a {
+    padding: 10px 60px;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  #navigation .navContainer {
+    max-width: 100%;
+  }
+  #title .titleContainer {
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+    flex-direction: column;
+    max-width: 100%;
+    padding: 10px;
+  }
+  #title .titleContainer .social {
+    padding: 20px;
+  }
+  #title .titleContainer .social .appoint a {
+    padding: 10px 60px;
+  }
+}
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+  #navigation .navContainer {
+    max-width: 80%;
+  }
+}/*# sourceMappingURL=contactUs.css.map */

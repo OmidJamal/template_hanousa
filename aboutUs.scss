@@ -1,0 +1,804 @@
+$baseColor: #202c45;
+$whiteColor: #fff;
+$blueColor: #1196CC;
+$normalFontSize: 20px;
+
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+
+// Font face created -- (Vazirmatn)
+@font-face {
+    font-family: 'Vazirmatn';
+    src: url('../fonts/webfonts/Vazirmatn[wght].woff2') format('woff2 supports variations'),
+        url('../fonts/webfonts/Vazirmatn[wght].woff2') format('woff2-variations');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+// Creat mixin for flex box
+@mixin flexBox($display, $justifyContent, $alignItems) {
+    display: $display;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+    font-family: Vazirmatn;
+    box-sizing: border-box;
+}
+
+#topBtn a {
+    position: fixed;
+    bottom: -100px;
+    right: 30px;
+    font-size: 60px;
+    transition: all .3s ease;
+    color: $baseColor;
+    z-index: 101;
+    &:hover{
+        color: $blueColor;
+    }
+}
+
+// section Title sass style 
+#title {
+    background-color: $baseColor;
+
+    .titleContainer {
+        @include flexBox(flex, space-between, center);
+        max-width: 70%;
+        margin: auto;
+
+        .contact {
+            @include flexBox(flex, stretch, center);
+
+            .items {
+                @include flexBox(flex, stretch, center);
+                padding: 10px;
+
+                img {
+                    width: 20px;
+                    filter: invert(100%);
+                }
+
+                p {
+                    color: $whiteColor;
+                    padding: 0 10px;
+                    margin: 0;
+                }
+            }
+
+        }
+
+        .social {
+            @include flexBox(flex, stretch, center);
+
+            .appoint {
+                a {
+                    display: inline-block;
+                    text-decoration: none;
+                    color: $whiteColor;
+                    background-color: $blueColor;
+                    padding: 20px 60px;
+
+                    font: {
+                        size: $normalFontSize;
+                    }
+
+                    ;
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+}
+
+
+
+#navigation {
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    box-shadow: 0px 2px 15px rgb(0 0 0 / 10%);
+    background-color: $whiteColor;
+
+    .search-box {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        background-color: $whiteColor;
+        z-index: 99;
+        text-align: center;
+        height: 0;
+        overflow: hidden;
+        transition: all .5s ease;
+
+        img {
+            width: 25px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            filter: invert(70%);
+            transition: all .5s ease;
+
+            &:hover {
+                filter: invert(0%);
+            }
+        }
+
+        input {
+            padding: 30px;
+            width: 100%;
+            text-align: center;
+            font-size: 30px;
+            border: none;
+            outline: none;
+        }
+    }
+
+    .navContainer {
+        @include flexBox(flex, space-between, center);
+        max-width: 70%;
+        margin: auto;
+        padding: 20px 0;
+
+        .nav {
+            @include flexBox(flex, stretch, center);
+
+            .bars {
+                @include flexBox(flex, stretch, center);
+
+                .searchBar {
+                    // background-color: yellow;
+                    padding: 10px 10px 0 10px;
+
+                    img {
+                        width: 30px;
+                        vertical-align: baseline;
+                    }
+                }
+
+                .barBtn {
+                    width: 30px;
+                    height: 30px;
+                    cursor: pointer;
+                    background-color: transparent;
+                    border: none;
+                    display: none;
+                }
+            }
+
+            .nav-ul {
+                @include flexBox(flex, stretch, center);
+                transition: height .5s all;
+                margin: 0;
+
+                li {
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+
+
+                    a {
+                        display: inline-block;
+                        text-decoration: none;
+                        color: black;
+                        margin: 0;
+
+                        font: {
+                            size: $normalFontSize;
+                        }
+
+                        ;
+                        padding: 10px 20px;
+                    }
+
+
+                    .active {
+                        background-color: $baseColor;
+                        border-radius: 30px;
+                        color: $whiteColor;
+                    }
+
+                    :hover {
+                        @extend .active;
+                    }
+                }
+
+            }
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.mainContainer {
+    max-width: 90%;
+    margin: 60px auto;
+    @include flexBox(flex, space-between, stretch);
+    flex-wrap: wrap;
+    .mainContent {
+        width: 50%;
+    }
+
+    .content-text {
+        h1 {
+            color: $blueColor;
+            font-size: 65px;
+        }
+
+        p {
+            font-weight: 700;
+            padding-top: 40px;
+            text-align: justify;
+        }
+
+        .video {
+            border-radius: 20px;
+            margin-top: 20px;
+            box-shadow: 0 0 20px 5px rgb(194, 194, 194);
+            video{
+                border-radius: 20px;
+                width: 100%;
+            }
+        }
+    }
+    .content-row{
+        @include flexBox(flex,space-between,stretch );
+        flex-direction: column;
+        padding: 30px 60px;
+        .rowItems{
+            @include flexBox(flex,stretch ,flex-start);
+            .icons{
+                @include flexBox(flex,center ,center );
+                img{
+                    filter: invert(100%);
+                    width: 50px;
+                    height: 60px;
+                }
+                padding: 30px 40px;
+                background-color: #1196CC;
+                border-radius: 30px;
+            }
+            .rowItems-text{
+                margin-right: 20px;
+                h4{
+                    margin-bottom: 30px;
+                }
+                p{
+                    text-align: justify;
+                }
+
+            }
+        }
+    }
+}
+
+#footer {
+    padding: 100px 0;
+    background-color: $baseColor;
+
+    .footerContainer {
+        max-width: 70%;
+        margin: auto;
+
+        .footerAbout {
+            padding: 30px;
+            // background-color: #202c45;
+            color: $whiteColor;
+
+            h2 {
+                font: {
+                    size: 40px;
+                    weight: 900;
+                }
+            }
+
+            p {
+                font-size: 16px;
+                color: gray;
+            }
+
+            .footerSocial {
+                @include flexBox(flex, stretch, center);
+
+                img {
+                    width: 30px;
+                    height: 30px;
+                    margin: 5px;
+                }
+            }
+        }
+    }
+
+    .footerExplor {
+        color: $whiteColor;
+        padding: 30px;
+        @include flexBox(flex, flex-start, flex-start);
+        flex-direction: column;
+
+        .export-uls {
+            @include flexBox(flex, center, stretch);
+
+            // background-color: yellow;
+            ul {
+                flex-direction: column;
+                
+                li {
+                    color: gray;
+                    padding: 10px 15px;
+                    list-style-type: "<";
+                    &:hover {
+                        color: #1196CC;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: gray;
+
+                    }
+                }
+            }
+
+            ;
+        }
+
+        ;
+    }
+
+    .footerNews {
+        padding: 30px;
+        color: $whiteColor;
+
+        .newsItems {
+            padding: 10px 0;
+
+            .newsContent {
+                margin: 20px 0;
+                @include flexBox(flex, stretch, stretch);
+
+                img {
+                    width: 80px;
+                    height: 80px;
+                }
+
+                .linkNews {
+                    padding: 10px 20px;
+
+                    p {
+                        color: gray;
+                        line-height: .5px;
+                    }
+
+                    a {
+                        font-size: 14;
+                        color: $whiteColor;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .footerContact {
+        padding: 30px;
+        color: $whiteColor;
+
+        .footerItems {
+            color: gray;
+            padding: 20px 0;
+
+            div {
+                @include flexBox(flex, stretch, center);
+                padding: 8px 0;
+
+                img {
+                    width: 20px;
+                    filter: invert(70%);
+                }
+
+                p {
+                    margin: 0;
+                    padding: 0 10px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #navigation {
+        position: relative;
+
+        .navContainer {
+            max-width: 100%;
+
+            .nav {
+                width: 100%;
+                @include flexBox(flex, stretch, stretch);
+                flex-direction: column;
+
+                .bars {
+                    padding: 10px;
+
+                    .barBtn {
+                        display: block;
+                    }
+                }
+
+                .nav-ul-respons {
+                    transition: height .5s all;
+                    height: 0px;
+                    overflow: hidden;
+                    margin-top: 10px;
+                    @include flexBox(flex, stretch, stretch);
+                    flex-direction: column;
+                    padding-top: 10px;
+
+                    .li-respons {
+                        width: 100%;
+                        background-color: $baseColor;
+                        border-bottom: 1px solid $blueColor;
+
+                        a {
+                            color: $whiteColor;
+                        }
+                    }
+                }
+            }
+
+            .logo {
+                position: absolute;
+                top: 30px;
+                left: 5px;
+            }
+        }
+    }
+
+    #footer {
+        .footerContainer {
+            max-width: 100%;
+        }
+    }
+    .mainContainer{
+        max-width: 100%;
+        .mainContent{
+            width: 90%;
+            margin: auto;
+        }
+
+        .content-row{
+            padding: 50px 0;
+            .rowItems{
+                @include flexBox(flex,stretch ,flex-start);
+                flex-direction: column;
+
+                .rowItems-text{
+                    h4{
+                        margin-bottom: 30px;
+                        margin-top: 30px;
+                    }
+                    p{
+                        text-align: justify;
+                    }
+    
+                }
+            }
+        }
+    }
+    #title {
+        .titleContainer {
+            @include flexBox(flex, stretch, center);
+            flex-direction: column;
+            max-width: 100%;
+            padding: 10px;
+
+            .contact {
+                @include flexBox(flex, stretch, stretch);
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            .social {
+                padding: 20px;
+
+                .appoint {
+                    a {
+                        padding: 10px 60px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 768px) {
+
+
+    #navigation {
+        position: relative;
+
+        .navContainer {
+            max-width: 100%;
+
+            .nav {
+                width: 100%;
+                @include flexBox(flex, stretch, stretch);
+                flex-direction: column;
+
+                .bars {
+                    padding: 10px;
+
+                    .barBtn {
+                        display: block;
+                    }
+                }
+
+                .nav-ul-respons {
+                    transition: height .5s all;
+                    height: 0px;
+                    overflow: hidden;
+                    margin-top: 10px;
+                    @include flexBox(flex, stretch, stretch);
+                    flex-direction: column;
+                    padding-top: 10px;
+
+                    .li-respons {
+                        width: 100%;
+                        background-color: $baseColor;
+                        border-bottom: 1px solid $blueColor;
+
+                        a {
+                            color: $whiteColor;
+                        }
+                    }
+                }
+            }
+
+            .logo {
+                position: absolute;
+                top: 30px;
+                left: 5px;
+            }
+        }
+    }
+
+    #footer {
+        .footerContainer {
+            max-width: 100%;
+        }
+    }
+
+    .mainContainer{
+        max-width: 100%;
+        .mainContent{
+            width: 90%;
+            margin: auto;
+        }
+        .content-row{
+            padding: 50px 0;
+            .rowItems{
+                @include flexBox(flex,stretch ,flex-start);
+                flex-direction: column;
+
+                .rowItems-text{
+                    h4{
+                        margin-bottom: 30px;
+                        margin-top: 30px;
+                    }
+                    p{
+                        text-align: justify;
+                    }
+    
+                }
+            }
+        }
+    }
+
+    #title {
+        .titleContainer {
+            @include flexBox(flex, stretch, center);
+            flex-direction: column;
+            max-width: 100%;
+            padding: 10px;
+
+            .social {
+                padding: 20px;
+
+                .appoint {
+                    a {
+                        padding: 10px 60px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+
+    #navigation {
+        position: relative;
+
+        .navContainer {
+            max-width: 100%;
+
+            .nav {
+                width: 100%;
+                @include flexBox(flex, stretch, stretch);
+                flex-direction: column;
+
+                .bars {
+                    padding: 10px;
+
+                    .barBtn {
+                        display: block;
+                    }
+                }
+
+                .nav-ul-respons {
+                    transition: height .5s all;
+                    height: 0px;
+                    overflow: hidden;
+                    margin-top: 10px;
+                    @include flexBox(flex, stretch, stretch);
+                    flex-direction: column;
+                    padding-top: 10px;
+
+                    .li-respons {
+                        width: 100%;
+                        background-color: $baseColor;
+                        border-bottom: 1px solid $blueColor;
+
+                        a {
+                            color: $whiteColor;
+                        }
+                    }
+                }
+            }
+
+            .logo {
+                position: absolute;
+                top: 30px;
+                left: 5px;
+            }
+        }
+    }
+
+    .col-md-12 {
+        width: 100%;
+    }
+
+    .mainContainer{
+        max-width: 100%;
+        .mainContent{
+            width: 80%;
+            margin: auto;
+        }
+        .content-row{
+            padding: 50px 0;
+            .rowItems{
+                @include flexBox(flex,stretch ,flex-start);
+                flex-direction: column;
+
+                .rowItems-text{
+                    h4{
+                        margin-bottom: 30px;
+                        margin-top: 30px;
+                    }
+                    p{
+                        text-align: justify;
+                    }
+    
+                }
+            }
+        }
+    }
+    #title {
+        .titleContainer {
+            @include flexBox(flex, stretch, center);
+            flex-direction: column;
+            max-width: 100%;
+            padding: 10px;
+
+            .social {
+                padding: 20px;
+
+                .appoint {
+                    a {
+                        padding: 10px 60px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+
+    #navigation {
+        .navContainer {
+            max-width: 100%;
+        }
+    }
+
+    .mainContainer{
+        max-width: 100%;
+        .mainContent{
+            width: 80%;
+            margin: auto;
+        }
+        .content-row{
+            padding: 50px 0;
+            .rowItems{
+                @include flexBox(flex,stretch ,flex-start);
+                flex-direction: column;
+
+                .rowItems-text{
+                    h4{
+                        margin-bottom: 30px;
+                        margin-top: 30px;
+                    }
+                    p{
+                        text-align: justify;
+                    }
+    
+                }
+            }
+        }
+        
+    }
+
+    #title {
+        .titleContainer {
+            @include flexBox(flex, stretch, center);
+            flex-direction: column;
+            max-width: 100%;
+            padding: 10px;
+
+            .social {
+                padding: 20px;
+
+                .appoint {
+                    a {
+                        padding: 10px 60px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:1200px) and (max-width: 1400px) {
+
+    #navigation {
+        .navContainer {
+            max-width: 80%;
+        }
+    }
+
+}
+
+@media screen and (min-width:1400px) and (max-width:1600px) {}
