@@ -96,7 +96,7 @@ $normalFontSize: 20px;
         right: 0;
         left: 0;
         background-color: $whiteColor;
-        z-index: 99;
+        z-index: 100;
         text-align: center;
         height: 0;
         overflow: hidden;
@@ -131,7 +131,7 @@ $normalFontSize: 20px;
         max-width: 70%;
         margin: auto;
         padding: 20px 0;
-
+        // background-color: #fff;
         .nav {
             @include flexBox(flex, stretch, center);
 
@@ -167,8 +167,6 @@ $normalFontSize: 20px;
                     list-style: none;
                     margin: 0;
                     padding: 0;
-
-
                     a {
                         display: inline-block;
                         text-decoration: none;
@@ -183,7 +181,6 @@ $normalFontSize: 20px;
                         padding: 10px 20px;
                     }
 
-
                     .active {
                         background-color: $baseColor;
                         border-radius: 30px;
@@ -193,6 +190,7 @@ $normalFontSize: 20px;
                     :hover {
                         @extend .active;
                     }
+                    transition: all .5s ease;
                 }
 
             }
@@ -210,6 +208,7 @@ $normalFontSize: 20px;
         }
     }
 }
+//-------------------------------------------
 
 .contactContainer {
     @include flexBox(flex, stretch, center);
@@ -484,50 +483,48 @@ $normalFontSize: 20px;
 }
 
 @media screen and (max-width: 600px) {
-    #navigation {
-        position: relative;
-
-        .navContainer {
+    #navigation{
+        .navContainer{
             max-width: 100%;
-
-            .nav {
-                width: 100%;
-                @include flexBox(flex, stretch, stretch);
-                flex-direction: column;
-
-                .bars {
-                    padding: 10px;
-
-                    .barBtn {
-                        display: block;
-                    }
-                }
-
-                .nav-ul-respons {
-                    transition: height .5s all;
-                    height: 0px;
-                    overflow: hidden;
-                    margin-top: 10px;
-                    @include flexBox(flex, stretch, stretch);
-                    flex-direction: column;
-                    padding-top: 10px;
-
-                    .li-respons {
-                        width: 100%;
-                        background-color: $baseColor;
-                        border-bottom: 1px solid $blueColor;
-
-                        a {
-                            color: $whiteColor;
-                        }
-                    }
-                }
-            }
-
-            .logo {
+            .logo{
                 position: absolute;
                 top: 30px;
                 left: 5px;
+            }
+            .nav{
+                @include flexBox(flex,stretch ,stretch );
+                flex-direction: column;
+                width: 100%;
+                margin-top: 10px;
+                .bars{
+                    .barBtn{
+                        display: block;
+                        margin-right: 10px;
+                    }
+                }
+                .nav-ul{
+                    background-color: $baseColor;
+                    margin-top: 10px;
+                    padding: 0;
+                    @include flexBox(flex,stretch ,flex-start );
+                    flex-direction: column;
+                    width: 100%;
+                    height: 0px;
+                    overflow: hidden;
+                    li{
+                        width: 100%;
+                        border-bottom: 1px solid $blueColor;
+
+                        a{
+                            width: 100%;
+                            border-radius: 0;
+                            color: $whiteColor;
+                            &:hover{
+                                color: $blueColor;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
@@ -589,50 +586,48 @@ $normalFontSize: 20px;
 @media screen and (min-width: 600px) and (max-width: 768px) {
 
 
-    #navigation {
-        position: relative;
-
-        .navContainer {
+    #navigation{
+        .navContainer{
             max-width: 100%;
-
-            .nav {
-                width: 100%;
-                @include flexBox(flex, stretch, stretch);
-                flex-direction: column;
-
-                .bars {
-                    padding: 10px;
-
-                    .barBtn {
-                        display: block;
-                    }
-                }
-
-                .nav-ul-respons {
-                    transition: height .5s all;
-                    height: 0px;
-                    overflow: hidden;
-                    margin-top: 10px;
-                    @include flexBox(flex, stretch, stretch);
-                    flex-direction: column;
-                    padding-top: 10px;
-
-                    .li-respons {
-                        width: 100%;
-                        background-color: $baseColor;
-                        border-bottom: 1px solid $blueColor;
-
-                        a {
-                            color: $whiteColor;
-                        }
-                    }
-                }
-            }
-
-            .logo {
+            .logo{
                 position: absolute;
                 top: 30px;
                 left: 5px;
+            }
+            .nav{
+                @include flexBox(flex,stretch ,stretch );
+                flex-direction: column;
+                width: 100%;
+                margin-top: 10px;
+                .bars{
+                    .barBtn{
+                        display: block;
+                        margin-right: 10px;
+                    }
+                }
+                .nav-ul{
+                    background-color: $baseColor;
+                    margin-top: 10px;
+                    padding: 0;
+                    @include flexBox(flex,stretch ,flex-start );
+                    flex-direction: column;
+                    width: 100%;
+                    height: 0px;
+                    overflow: hidden;
+                    li{
+                        width: 100%;
+                        border-bottom: 1px solid $blueColor;
+
+                        a{
+                            width: 100%;
+                            border-radius: 0;
+                            color: $whiteColor;
+                            &:hover{
+                                color: $blueColor;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
@@ -688,50 +683,48 @@ $normalFontSize: 20px;
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
 
-    #navigation {
-        position: relative;
-
-        .navContainer {
+    #navigation{
+        .navContainer{
             max-width: 100%;
-
-            .nav {
-                width: 100%;
-                @include flexBox(flex, stretch, stretch);
-                flex-direction: column;
-
-                .bars {
-                    padding: 10px;
-
-                    .barBtn {
-                        display: block;
-                    }
-                }
-
-                .nav-ul-respons {
-                    transition: height .5s all;
-                    height: 0px;
-                    overflow: hidden;
-                    margin-top: 10px;
-                    @include flexBox(flex, stretch, stretch);
-                    flex-direction: column;
-                    padding-top: 10px;
-
-                    .li-respons {
-                        width: 100%;
-                        background-color: $baseColor;
-                        border-bottom: 1px solid $blueColor;
-
-                        a {
-                            color: $whiteColor;
-                        }
-                    }
-                }
-            }
-
-            .logo {
+            .logo{
                 position: absolute;
                 top: 30px;
                 left: 5px;
+            }
+            .nav{
+                @include flexBox(flex,stretch ,stretch );
+                flex-direction: column;
+                width: 100%;
+                margin-top: 10px;
+                .bars{
+                    .barBtn{
+                        display: block;
+                        margin-right: 10px;
+                    }
+                }
+                .nav-ul{
+                    background-color: $baseColor;
+                    margin-top: 10px;
+                    padding: 0;
+                    @include flexBox(flex,stretch ,flex-start );
+                    flex-direction: column;
+                    width: 100%;
+                    height: 0px;
+                    overflow: hidden;
+                    li{
+                        width: 100%;
+                        border-bottom: 1px solid $blueColor;
+
+                        a{
+                            width: 100%;
+                            border-radius: 0;
+                            color: $whiteColor;
+                            &:hover{
+                                color: $blueColor;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
@@ -762,8 +755,8 @@ $normalFontSize: 20px;
 
 @media screen and (min-width: 992px) and (max-width: 1200px) {
 
-    #navigation {
-        .navContainer {
+    #navigation{
+        .navContainer{
             max-width: 100%;
         }
     }
