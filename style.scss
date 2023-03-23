@@ -55,7 +55,7 @@ a {
     transition: 1s all ease;
 }
 
-.reveal.active {
+.reveal.active-r {
     transform: translateY(0);
     opacity: 1;
 }
@@ -74,6 +74,7 @@ a {
         color: $blueColor;
     }
 }
+
 //-------------------------------------------
 
 
@@ -129,6 +130,7 @@ a {
         }
     }
 }
+
 //-------------------------------------------
 
 // Nvigation Section sass style
@@ -138,6 +140,7 @@ a {
     z-index: 99;
     box-shadow: 0px 2px 15px rgb(0 0 0 / 10%);
     background-color: $whiteColor;
+
     .search-box {
         position: absolute;
         top: 0;
@@ -179,6 +182,7 @@ a {
         max-width: 70%;
         margin: auto;
         padding: 20px 0;
+
         // background-color: #fff;
         .nav {
             @include flexBox(flex, stretch, center);
@@ -215,6 +219,7 @@ a {
                     list-style: none;
                     margin: 0;
                     padding: 0;
+
                     a {
                         display: inline-block;
                         text-decoration: none;
@@ -229,15 +234,16 @@ a {
                         padding: 10px 20px;
                     }
 
-                    .active {
+                    .active-a {
                         background-color: $baseColor;
                         border-radius: 30px;
                         color: $whiteColor;
                     }
 
                     :hover {
-                        @extend .active;
+                        @extend .active-a;
                     }
+
                     transition: all .5s ease;
                 }
 
@@ -256,20 +262,23 @@ a {
         }
     }
 }
+
 //-------------------------------------------
 
 
 // header Section sass style 
-.sliderContainer{
+.sliderContainer {
     position: relative;
-    
+
 }
 
-#info{
+#info {
     position: relative;
+
     .info {
         position: absolute;
         top: -150px;
+
         .rowInfo {
             max-width: 80%;
             margin: auto;
@@ -386,11 +395,13 @@ a {
         }
     }
 }
+
 // weCare section sass style
 #weCare {
     .weCareContainer {
         margin-top: 300px;
         margin-bottom: 100px;
+
         .weCareContent {
             max-width: 70%;
             margin: auto;
@@ -399,10 +410,13 @@ a {
                 padding: 0;
 
                 width: 35%;
+
                 img {
                     width: 100%;
                     height: 100%;
                 }
+
+                background-color: yellow;
             }
 
 
@@ -446,15 +460,18 @@ a {
     }
 }
 
+
 // swiper scss style and certificate sass style
-#certificate{
+#certificate {
     background-color: #eee;
     padding: 80px 0;
-    .cerSwiper{
+
+    .cerSwiper {
         max-width: 70%;
         margin: auto;
     }
 }
+
 .swiper {
     width: 100%;
     height: 100%;
@@ -480,6 +497,7 @@ a {
     margin-left: auto;
     margin-right: auto;
 }
+
 //------------------------------------------
 
 // SErvice Section sass style
@@ -604,9 +622,11 @@ a {
         .depTitle {
             text-align: center;
 
+
             img {
                 padding: 10px;
             }
+
 
             p {
                 color: gray;
@@ -625,8 +645,28 @@ a {
                 width: calc(33.33% - 30px);
 
                 .depItems {
-                    img {
-                        width: 100%;
+                    cursor: pointer;
+                    &:hover{
+                        .hoverBox{
+                            background-color: transparent;
+                        }
+                    }
+                    div {
+                        position: relative;
+                        img {
+                            width: 100%;
+                            border-radius: 15px;
+                        }
+                        .hoverBox{
+                            border-radius: 15px;
+                            width: 100%;
+                            height: 100%;
+                            background-color: #1197ccbe;
+                            position: absolute;
+                            top: 0;
+                            transition: all 1s ease;
+                            cursor: pointer;
+                        }
                     }
 
                     h4 {
@@ -686,6 +726,25 @@ a {
             .dentistSwiper {
                 .dentistSlide {
                     background-color: #eee;
+                    cursor: pointer;
+                    &:hover{
+                        .dentBox{
+                            background-color: transparent;
+                        }
+                    }
+                    div{
+                        position: relative;
+                        .dentBox{
+                            
+                            width: 100%;
+                            height: 100%;
+                            position: absolute;
+                            top: 0;
+                            background-color: #1197ccb7;
+                            transition: all 1s ease;
+                            cursor: pointer;
+                        }
+                    }
 
                     h4 {
                         margin-top: 15px;
@@ -698,6 +757,8 @@ a {
                             size: 14px;
                         }
                     }
+
+                    
 
                     .dent-social {
                         @include flexBox(flex, center, center);
@@ -867,7 +928,8 @@ a {
                 color: $whiteColor;
                 border-radius: 30px;
                 transition: all .5s ease;
-                &:hover{
+
+                &:hover {
                     box-shadow: 0 0 20px 3px $whiteColor;
                 }
             }
@@ -909,11 +971,28 @@ a {
 
             .newsSlide {
                 background-color: #eee;
-
+                
                 .slideItems {
                     @include flexBox(flex, stretch, stretch);
                     flex-direction: column;
-
+                    cursor: pointer;
+                    &:hover{
+                        .newsBox{
+                            background-color: transparent;
+                        }
+                    }
+                    div{
+                        position: relative;
+                        .newsBox{
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            background-color: #202c45a9;
+                            top: 0;
+                            transition: all 1s ease;
+                            
+                        }
+                    }
                     .newsComment {
                         @include flexBox(flex, space-between, center);
                         background-color: $baseColor;
@@ -998,7 +1077,7 @@ a {
     background-color: $baseColor;
 
     .footerContainer {
-        max-width: 70%;
+        max-width: 75%;
         margin: auto;
 
         .footerAbout {
@@ -1032,10 +1111,12 @@ a {
 
     .footerExplor {
         color: $whiteColor;
-        padding: 30px;
+        padding: 30px 0;
         @include flexBox(flex, flex-start, flex-start);
         flex-direction: column;
-
+        h2{
+            padding-right: 20px
+        }
         .export-uls {
             @include flexBox(flex, center, stretch);
 
@@ -1045,8 +1126,9 @@ a {
 
                 li {
                     color: gray;
-                    padding: 10px 20px;
+                    padding: 10px 10px;
                     list-style-type: "<";
+
                     &:hover {
                         color: #1196CC;
                     }
@@ -1147,43 +1229,49 @@ a {
         }
     }
 
-    #navigation{
-        .navContainer{
+    #navigation {
+        .navContainer {
             max-width: 100%;
-            .logo{
+
+            .logo {
                 position: absolute;
                 top: 30px;
                 left: 5px;
             }
-            .nav{
-                @include flexBox(flex,stretch ,stretch );
+
+            .nav {
+                @include flexBox(flex, stretch, stretch);
                 flex-direction: column;
                 width: 100%;
                 margin-top: 10px;
-                .bars{
-                    .barBtn{
+
+                .bars {
+                    .barBtn {
                         display: block;
                         margin-right: 10px;
                     }
                 }
-                .nav-ul{
+
+                .nav-ul {
                     background-color: $baseColor;
                     margin-top: 10px;
                     padding: 0;
-                    @include flexBox(flex,stretch ,flex-start );
+                    @include flexBox(flex, stretch, flex-start);
                     flex-direction: column;
                     width: 100%;
                     height: 0px;
                     overflow: hidden;
-                    li{
+
+                    li {
                         width: 100%;
                         border-bottom: 1px solid $blueColor;
 
-                        a{
+                        a {
                             width: 100%;
                             border-radius: 0;
                             color: $whiteColor;
-                            &:hover{
+
+                            &:hover {
                                 color: $blueColor;
                             }
                         }
@@ -1193,9 +1281,10 @@ a {
         }
     }
 
-    #info{
+    #info {
         .info {
             position: static;
+
             .rowInfo {
                 max-width: 100%;
             }
@@ -1205,6 +1294,7 @@ a {
     #weCare {
         .weCareContainer {
             margin-top: 100px;
+
             .weCareContent {
                 max-width: 90%;
                 @include flexBox(flex, stretch, stretch);
@@ -1265,6 +1355,7 @@ a {
         }
 
     }
+
     #footer {
         .footerContainer {
             max-width: 100%;
@@ -1290,43 +1381,50 @@ a {
             }
         }
     }
-    #navigation{
-        .navContainer{
+
+    #navigation {
+        .navContainer {
             max-width: 100%;
-            .logo{
+
+            .logo {
                 position: absolute;
                 top: 30px;
                 left: 5px;
             }
-            .nav{
-                @include flexBox(flex,stretch ,stretch );
+
+            .nav {
+                @include flexBox(flex, stretch, stretch);
                 flex-direction: column;
                 width: 100%;
                 margin-top: 10px;
-                .bars{
-                    .barBtn{
+
+                .bars {
+                    .barBtn {
                         display: block;
                         margin-right: 10px;
                     }
                 }
-                .nav-ul{
+
+                .nav-ul {
                     background-color: $baseColor;
                     margin-top: 10px;
                     padding: 0;
-                    @include flexBox(flex,stretch ,flex-start );
+                    @include flexBox(flex, stretch, flex-start);
                     flex-direction: column;
                     width: 100%;
                     height: 0px;
                     overflow: hidden;
-                    li{
+
+                    li {
                         width: 100%;
                         border-bottom: 1px solid $blueColor;
 
-                        a{
+                        a {
                             width: 100%;
                             border-radius: 0;
                             color: $whiteColor;
-                            &:hover{
+
+                            &:hover {
                                 color: $blueColor;
                             }
                         }
@@ -1335,9 +1433,11 @@ a {
             }
         }
     }
-    #info{
+
+    #info {
         .info {
             position: static;
+
             .rowInfo {
                 max-width: 100%;
             }
@@ -1347,6 +1447,7 @@ a {
     #weCare {
         .weCareContainer {
             margin-top: 100px;
+
             .weCareContent {
                 max-width: 90%;
                 @include flexBox(flex, stretch, stretch);
@@ -1443,43 +1544,50 @@ a {
             }
         }
     }
-    #navigation{
-        .navContainer{
+
+    #navigation {
+        .navContainer {
             max-width: 100%;
-            .logo{
+
+            .logo {
                 position: absolute;
                 top: 30px;
                 left: 5px;
             }
-            .nav{
-                @include flexBox(flex,stretch ,stretch );
+
+            .nav {
+                @include flexBox(flex, stretch, stretch);
                 flex-direction: column;
                 width: 100%;
                 margin-top: 10px;
-                .bars{
-                    .barBtn{
+
+                .bars {
+                    .barBtn {
                         display: block;
                         margin-right: 10px;
                     }
                 }
-                .nav-ul{
+
+                .nav-ul {
                     background-color: $baseColor;
                     margin-top: 10px;
                     padding: 0;
-                    @include flexBox(flex,stretch ,flex-start );
+                    @include flexBox(flex, stretch, flex-start);
                     flex-direction: column;
                     width: 100%;
                     height: 0px;
                     overflow: hidden;
-                    li{
+
+                    li {
                         width: 100%;
                         border-bottom: 1px solid $blueColor;
 
-                        a{
+                        a {
                             width: 100%;
                             border-radius: 0;
                             color: $whiteColor;
-                            &:hover{
+
+                            &:hover {
                                 color: $blueColor;
                             }
                         }
@@ -1488,17 +1596,21 @@ a {
             }
         }
     }
-    #info{
+
+    #info {
         .info {
             position: static;
+
             .rowInfo {
                 max-width: 100%;
             }
         }
     }
+
     #weCare {
         .weCareContainer {
             margin-top: 100px;
+
             .weCareContent {
                 max-width: 90%;
                 @include flexBox(flex, stretch, stretch);
@@ -1516,6 +1628,7 @@ a {
             }
         }
     }
+
     #service {
         .serviceContainer {
             max-width: 90%;
@@ -1532,6 +1645,7 @@ a {
             }
         }
     }
+
     #depertment {
         .depContainer {
             max-width: 90%;
@@ -1544,11 +1658,13 @@ a {
             }
         }
     }
+
     #dentist {
         .dentistContainer {
             max-width: 85%;
         }
     }
+
     #price {
         .priceContainer {
             max-width: 85%;
@@ -1586,12 +1702,14 @@ a {
             }
         }
     }
-    #navigation{
-        .navContainer{
+
+    #navigation {
+        .navContainer {
             max-width: 100%;
         }
     }
-    #info{
+
+    #info {
         .info {
             position: static;
 
@@ -1613,6 +1731,7 @@ a {
             }
         }
     }
+
     #service {
         .serviceContainer {
             max-width: 90%;
@@ -1629,11 +1748,13 @@ a {
             }
         }
     }
+
     #dentist {
         .dentistContainer {
             max-width: 85%;
         }
     }
+
     #price {
         .priceContainer {
             max-width: 70%;
@@ -1651,10 +1772,11 @@ a {
         }
 
     }
+    
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
-    #info{
+    #info {
         .info {
             position: static;
 
@@ -1676,6 +1798,7 @@ a {
             }
         }
     }
+
     #service {
         .serviceContainer {
             max-width: 80%;
@@ -1692,11 +1815,13 @@ a {
             }
         }
     }
+
     #dentist {
         .dentistContainer {
             max-width: 83%;
         }
     }
+
     #price {
         .priceContainer {
             max-width: 85%;
@@ -1713,8 +1838,12 @@ a {
             }
         }
     }
+
+    #footer {
+        .footerContainer {
+            max-width: 100%;
+        }
+    }
 }
 
-@media screen and (min-width: 1400px) and (max-width: 1600px) {
-
-}
+@media screen and (min-width: 1400px) and (max-width: 1600px) {}

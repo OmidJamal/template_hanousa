@@ -40,10 +40,10 @@ function reveal() {
         var elementVisible = 150;
 
         if (elementTop < windowHeight - elementVisible) {
-            reveals[i].classList.add("active");
+            reveals[i].classList.add("active-r");
 
         } else {
-            reveals[i].classList.remove("active");
+            reveals[i].classList.remove("active-r");
         }
     }
 }
@@ -360,3 +360,8 @@ var swiper = new Swiper(".dentistSwiper", {
       },
     },
   });
+
+
+  function beforeAfter() {
+    document.getElementById('compare').style.width = document.getElementById('slider').value + "%";
+  }

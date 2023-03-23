@@ -38,7 +38,7 @@ a {
   transition: 1s all ease;
 }
 
-.reveal.active, #navigation .navContainer .nav .nav-ul li .reveal:hover {
+.reveal.active-r {
   transform: translateY(0);
   opacity: 1;
 }
@@ -194,7 +194,7 @@ a {
   font-size: 20px;
   padding: 10px 20px;
 }
-#navigation .navContainer .nav .nav-ul li .active, #navigation .navContainer .nav .nav-ul li :hover {
+#navigation .navContainer .nav .nav-ul li .active-a, #navigation .navContainer .nav .nav-ul li :hover {
   background-color: #202c45;
   border-radius: 30px;
   color: #fff;
@@ -341,6 +341,7 @@ a {
 #weCare .weCareContainer .weCareContent .weCareImg {
   padding: 0;
   width: 35%;
+  background-color: yellow;
 }
 #weCare .weCareContainer .weCareContent .weCareImg img {
   width: 100%;
@@ -523,8 +524,28 @@ a {
   margin: 15px;
   width: calc(33.33% - 30px);
 }
-#depertment .depContainer .depContent .depRow .depItems img {
+#depertment .depContainer .depContent .depRow .depItems {
+  cursor: pointer;
+}
+#depertment .depContainer .depContent .depRow .depItems:hover .hoverBox {
+  background-color: transparent;
+}
+#depertment .depContainer .depContent .depRow .depItems div {
+  position: relative;
+}
+#depertment .depContainer .depContent .depRow .depItems div img {
   width: 100%;
+  border-radius: 15px;
+}
+#depertment .depContainer .depContent .depRow .depItems div .hoverBox {
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(17, 151, 204, 0.7450980392);
+  position: absolute;
+  top: 0;
+  transition: all 1s ease;
+  cursor: pointer;
 }
 #depertment .depContainer .depContent .depRow .depItems h4 {
   padding: 10px 0;
@@ -566,6 +587,22 @@ a {
 }
 #dentist .dentistContainer .dentistContent .dentistSwiper .dentistSlide {
   background-color: #eee;
+  cursor: pointer;
+}
+#dentist .dentistContainer .dentistContent .dentistSwiper .dentistSlide:hover .dentBox {
+  background-color: transparent;
+}
+#dentist .dentistContainer .dentistContent .dentistSwiper .dentistSlide div {
+  position: relative;
+}
+#dentist .dentistContainer .dentistContent .dentistSwiper .dentistSlide div .dentBox {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background-color: rgba(17, 151, 204, 0.7176470588);
+  transition: all 1s ease;
+  cursor: pointer;
 }
 #dentist .dentistContainer .dentistContent .dentistSwiper .dentistSlide h4 {
   margin-top: 15px;
@@ -742,6 +779,21 @@ a {
   justify-content: stretch;
   align-items: stretch;
   flex-direction: column;
+  cursor: pointer;
+}
+#news .newsContainer .newsContent .newsSlide .slideItems:hover .newsBox {
+  background-color: transparent;
+}
+#news .newsContainer .newsContent .newsSlide .slideItems div {
+  position: relative;
+}
+#news .newsContainer .newsContent .newsSlide .slideItems div .newsBox {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(32, 44, 69, 0.662745098);
+  top: 0;
+  transition: all 1s ease;
 }
 #news .newsContainer .newsContent .newsSlide .slideItems .newsComment {
   display: flex;
@@ -816,7 +868,7 @@ a {
   background-color: #202c45;
 }
 #footer .footerContainer {
-  max-width: 70%;
+  max-width: 75%;
   margin: auto;
 }
 #footer .footerContainer .footerAbout {
@@ -843,11 +895,14 @@ a {
 }
 #footer .footerExplor {
   color: #fff;
-  padding: 30px;
+  padding: 30px 0;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
+}
+#footer .footerExplor h2 {
+  padding-right: 20px;
 }
 #footer .footerExplor .export-uls {
   display: flex;
@@ -859,7 +914,7 @@ a {
 }
 #footer .footerExplor .export-uls ul li {
   color: gray;
-  padding: 10px 20px;
+  padding: 10px 10px;
   list-style-type: "<";
 }
 #footer .footerExplor .export-uls ul li:hover {
@@ -1377,5 +1432,8 @@ a {
   }
   #price .priceContent .price-rowItems button {
     padding: 10px 60px;
+  }
+  #footer .footerContainer {
+    max-width: 100%;
   }
 }/*# sourceMappingURL=style.css.map */
