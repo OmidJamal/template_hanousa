@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نوبت دهی</title>
+    <link rel="stylesheet" href="../assets/css/takeTurn.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <style media="">
+        .swiper {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            margin: auto;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 10px;
+            cursor: pointer;
+        }
+
+        .swiper-slide>div {
+            font-size: 12px;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Section Start -->
+    <nav id="navigation">
+        <div class="navContainer">
+            <div class="nav">
+                <div class="bars">
+                    <button id="barBtn" class="barBtn">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path
+                                d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32h42C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
+                        </svg>
+                    </button>
+                    <div class="searchBar">
+                        <a id="s-btn" href="">
+                            <img src="plugins/font-awesome/icons/magnifying-glass-solid.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <ul id="navUl" class="nav-ul nav-ul-respons">
+                    <li class="li-respons"><a class="active-a" href="#">صفحه اصلی</a></li>
+                    <li class="li-respons"><a href="aboutUs.html">درباره ما</a></li>
+                    <li class="li-respons"><a href="#">دسته بندی ها</a></li>
+                    <li class="li-respons">
+                        <a href="">برای بیماران</a>
+
+                    </li>
+                    <li class="li-respons">
+                        <a href="">برای پزشکان</a>
+                    </li>
+                    <li class="li-respons"><a href="contactUs.html">تماس با ما</a></li>
+                </ul>
+            </div>
+            <div class="logo">
+                <img src="assets/img/static/logo copy.png" alt="">
+            </div>
+        </div>
+        <div id="search-box" class="search-box">
+            <img id="clse-btn" src="plugins/font-awesome/icons/xmark-solid.svg" alt="">
+            <input type="text" name="" id="searches" placeholder="جستوجو کنید">
+        </div>
+
+    </nav>
+    <!-- Navigation Section End -->
+
+    <div class="visitModal">
+        <div class="popUp">
+            <div class="popUp-title">
+                <h3>نوبت دهی حضوری</h3>
+                <img id="closeBtn" class="closeBtn" src="../plugins/font-awesome/icons/xmark-solid.svg" alt="">
+            </div>
+            <div class="popUp-content">
+                <div class="contentItem1">
+                    <div class="detail">
+                        <p>برای مشاوره‌ی تلفنی با دکتر بهروز مقدادی زمان مورد نظر را انتخاب کنید، در زمان نوبت تماس
+                            تلفنی به صورت خودکار برقرار می‌شود.
+                        </p>
+                    </div>
+                </div>
+                <div class="contentItem2">
+                    <div class="warning">
+                        <div class="titleWarning">
+                            <img src="../plugins/font-awesome/icons/triangle-exclamation-solid.svg" alt="">
+                            <h4>ملاحضات مشاوره حضوری حتما خوانده شود</h4>
+                        </div>
+                        <p>باتوجه به محدودیت تعداد نوبت های مشاوره تلفنی ، در صورت عدم پاسخ بیمار به تماس تلفنی در ساعت
+                            نوبت، امکان برقراری تماس مجدد یا بازگشت وجه پرداختی وجود ندارد.
+                        </p>
+                    </div>
+                    <div class="cI-b">
+                        <!-- Swiper -->
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div>امروز</div>
+                                    <div>24 فرروردین</div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div>امروز</div>
+                                    <div>24 فرروردین</div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div>امروز</div>
+                                    <div>24 فرروردین</div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div>امروز</div>
+                                    <div>24 فرروردین</div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div>امروز</div>
+                                    <div>24 فرروردین</div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div>امروز</div>
+                                    <div>24 فرروردین</div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div>امروز</div>
+                                    <div>24 فرروردین</div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div>امروز</div>
+                                    <div>24 فرروردین</div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div>امروز</div>
+                                    <div>24 فرروردین</div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div>امروز</div>
+                                    <div>24 فرروردین</div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div>امروز</div>
+                                    <div>24 فرروردین</div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div>امروز</div>
+                                    <div>24 فرروردین</div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div>امروز</div>
+                                    <div>24 فرروردین</div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div>امروز</div>
+                                    <div>24 فرروردین</div>
+                                </div>
+
+                            </div>
+                            <div class="swiper-scrollbar"></div>
+                        </div>
+                    </div>
+                    <div class="actionBar ">
+                        <div class="prevBtn">></div>
+                        <div class="nextBtn">
+                            < </div>
+                        </div>
+                        <div class="timeTab">
+                            در این تاریخ نوبتی ثبت نشده است
+                        </div>
+                        <div class="nextTime">
+                            <a href="">نوبت بعدی در تاریخ 17 اردیبهشت</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section id="takeTurn">
+        <div class="takeContainer">
+            <div class="takeTitle">
+                <h1>نوبت گیری کلینیک دندانپزشکی رخ</h1>
+            </div>
+            <div class="takeContent">
+                <div class="contentItem1">
+                    <h3>نوبت مطب بلوار مجد</h3>
+                    <div class="contentDetail">
+                        <img src="../plugins/font-awesome/icons/location-dot-solid.svg" alt="">
+                        <p>بلوار مجد ،میدان اسدی،خیابان رام،پلاک 70</p>
+                    </div>
+                </div>
+                <div class="contentItme2">
+                    <h3>نوبت حضوری</h3>
+                    <div class="contentBody">
+                        <div class="firstTime">
+                            <img src="../plugins/font-awesome/icons/calendar-days-solid.svg" alt="">
+                            <p>اولین وقت خالی <span>01/24</span></p>
+                        </div>
+                        <div class="takeBtn">
+                            <a class="takeBtn1" href="#">نوبت بگیرید <span>></span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contentItem3">
+                    <h3>مشاوره تلفنی</h3>
+                    <div class="contentBody">
+                        <div class="firstTime">
+                            <div>
+                                <img src="../plugins/font-awesome/icons/clock-solid.svg" alt="">
+                                <p>اولین وقت خالی <span>01/24</span></p>
+                            </div>
+                            <div style="padding-top: 10px;">
+                                <img src="../plugins/font-awesome/icons/calendar-days-solid.svg" alt="">
+                                <p>اولین وقت خالی<span>01/24</span></p>
+                            </div>
+                        </div>
+                        <div class="takeBtn">
+                            <a href="#">نوبت بگیرید<span>></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <audio src="" autoplay="t"></audio>
+
+
+
+    <script src="../assets/js/takeTurn.js"></script>
+    <!-- Initialize Swiper -->
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 7,
+            spaceBetween: 0,
+            scrollbar: {
+                el: ".swiper-scrollbar",
+                hide: false,
+                dragsize: 0,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                type: "progressbar",
+            },
+            navigation: {
+                nextEl: ".prevBtn",
+                prevEl: ".nextBtn",
+            },
+        });
+    </script>
+</body>
+
+</html>
