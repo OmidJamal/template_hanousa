@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../assets/css/mainBlog.css">
+</head>
+
+<body>
+
+    <!-- Title Section Start -- css style lines : 59 to 104 -->
+    <section id="title">
+        <!-- title container start -->
+        <div class="titleContainer">
+            <!-- Contact div Strat -->
+            <div class="contact">
+                <di class="items">
+                    <img src="../plugins/font-awesome/icons/phone-solid.svg" alt="">
+                    <p>تلفن : 05137662666</p>
+                </di>
+                <di class="items">
+                    <img src="../plugins/font-awesome/icons/envelope-solid.svg" alt="">
+                    <p>تلفن : 05137662666</p>
+                </di>
+                <div class="items">
+                    <img src="../plugins/font-awesome/icons/location-dot-solid.svg" alt="">
+                    <p>مشهد ، بوار مجد</p>
+                </div>
+            </div>
+            <!-- Contact div end -->
+            <!-- Social div start -->
+            <div class="social">
+                <!-- <div class="link-container">
+                    <svg class="pro-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="#fff">
+                        <path
+                            d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z" />
+                    </svg>
+                    
+                    <a href="tel:9000911" class="phone-link">9000911</a>
+                </div> -->
+                <div class="appoint">
+                    <a href="sub_page/takeTurn.html">گرفتن نوبت پزشک</a>
+                </div>
+            </div>
+            <!-- Social div end -->
+        </div>
+        <!-- title container end -->
+    </section>
+    <!-- Title Section End -->
+
+    <!-- Navigation Section Start -->
+    <nav id="navigation">
+        <div class="navContainer">
+            <div class="nav">
+                <div class="bars">
+                    <button id="barBtn" class="barBtn">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path
+                                d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32h42C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
+                        </svg>
+                    </button>
+                    <div class="searchBar">
+                        <a id="s-btn" href="">
+                            <img src="plugins/font-awesome/icons/magnifying-glass-solid.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <ul id="navUl" class="nav-ul nav-ul-respons">
+                    <li class="li-respons"><a  href="../index.html">صفحه اصلی</a></li>
+                    <li class="li-respons"><a href="../aboutUs.html">درباره ما</a></li>
+                    <li class="li-respons"><a href="#" class="active-a">بلاگ</a></li>
+                    <li class="li-respons"><a href="../contactUs.html">تماس با ما</a></li>
+                </ul>
+            </div>
+            <div class="logo">
+                <img src="../assets/img/static/logo copy.png" alt="">
+            </div>
+        </div>
+        <div id="search-box" class="search-box">
+            <img id="clse-btn" src="plugins/font-awesome/icons/xmark-solid.svg" alt="">
+            <input type="text" name="" id="searches" placeholder="جستوجو کنید">
+        </div>
+
+    </nav>
+    <!-- Navigation Section End -->
+    <section id="mainBlog">
+        <div class="container-fluid blogContainer">
+            <div class="row blogContent">
+                <div class="col-sm-12 col-lg-6 col-xl-4 blogItems p-4">
+                    <div class="image">
+                        <img src="../assets/img/news1.jpg" alt="">
+                        <div class="time">
+                            <p>12 فروردین</p>
+                        </div>
+                    </div>
+                    <div class="title">
+                        <h3>نحوه ایمپلنت دندان</h3>
+                    </div>
+                    <div class="comment-status">
+                        <svg class="comIcon" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 512 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path
+                                d="M256 448c141.4 0 256-93.1 256-208S397.4 32 256 32S0 125.1 0 240c0 45.1 17.7 86.8 47.7 120.9c-1.9 24.5-11.4 46.3-21.4 62.9c-5.5 9.2-11.1 16.6-15.2 21.6c-2.1 2.5-3.7 4.4-4.9 5.7c-.6 .6-1 1.1-1.3 1.4l-.3 .3 0 0 0 0 0 0 0 0c-4.6 4.6-5.9 11.4-3.4 17.4c2.5 6 8.3 9.9 14.8 9.9c28.7 0 57.6-8.9 81.6-19.3c22.9-10 42.4-21.9 54.3-30.6c31.8 11.5 67 17.9 104.1 17.9zM128 208a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm128 0a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm96 32a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z" />
+                        </svg>
+                        <p>نظری وجود ندارد</p>
+                    </div>
+                    <div class="detail">
+                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است
+                            چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است
+                        </p>
+                    </div>
+                    <div class="readMore">
+                        <a href="blog/blog-page.html">بیشتر بدانید</a>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-lg-6 col-xl-4 blogItems p-4">
+                    <div class="image">
+                        <img src="../assets/img/news2.jpg" alt="">
+                        <div class="time">
+                            <p>12 فروردین</p>
+                        </div>
+                    </div>
+                    <div class="title">
+                        <h3>نحوه ایمپلنت دندان</h3>
+                    </div>
+                    <div class="comment-status">
+                        <svg class="comIcon" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 512 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path
+                                d="M256 448c141.4 0 256-93.1 256-208S397.4 32 256 32S0 125.1 0 240c0 45.1 17.7 86.8 47.7 120.9c-1.9 24.5-11.4 46.3-21.4 62.9c-5.5 9.2-11.1 16.6-15.2 21.6c-2.1 2.5-3.7 4.4-4.9 5.7c-.6 .6-1 1.1-1.3 1.4l-.3 .3 0 0 0 0 0 0 0 0c-4.6 4.6-5.9 11.4-3.4 17.4c2.5 6 8.3 9.9 14.8 9.9c28.7 0 57.6-8.9 81.6-19.3c22.9-10 42.4-21.9 54.3-30.6c31.8 11.5 67 17.9 104.1 17.9zM128 208a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm128 0a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm96 32a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z" />
+                        </svg>
+                        <p>نظری وجود ندارد</p>
+                    </div>
+                    <div class="detail">
+                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است
+                            چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است
+                        </p>
+                    </div>
+                    <div class="readMore">
+                        <a href="blog/blog-page.html">بیشتر بدانید</a>
+                        
+                    </div>
+                </div>
+                <div class="col-sm-12 col-lg-6 col-xl-4 blogItems p-4">
+                    <div class="image">
+                        <img src="../assets/img/news3.jpg" alt="">
+                        <div class="time">
+                            <p>12 فروردین</p>
+                        </div>
+                    </div>
+                    <div class="title">
+                        <h3>نحوه ایمپلنت دندان</h3>
+                    </div>
+                    <div class="comment-status">
+                        <svg class="comIcon" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 512 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path
+                                d="M256 448c141.4 0 256-93.1 256-208S397.4 32 256 32S0 125.1 0 240c0 45.1 17.7 86.8 47.7 120.9c-1.9 24.5-11.4 46.3-21.4 62.9c-5.5 9.2-11.1 16.6-15.2 21.6c-2.1 2.5-3.7 4.4-4.9 5.7c-.6 .6-1 1.1-1.3 1.4l-.3 .3 0 0 0 0 0 0 0 0c-4.6 4.6-5.9 11.4-3.4 17.4c2.5 6 8.3 9.9 14.8 9.9c28.7 0 57.6-8.9 81.6-19.3c22.9-10 42.4-21.9 54.3-30.6c31.8 11.5 67 17.9 104.1 17.9zM128 208a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm128 0a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm96 32a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z" />
+                        </svg>
+                        <p>نظری وجود ندارد</p>
+                    </div>
+                    <div class="detail">
+                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است
+                            چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است
+                        </p>
+                    </div>
+                    <div class="readMore">
+                        <a href="blog/blog-page.html">بیشتر بدانید</a>
+                        
+                    </div>
+                </div>
+                <div class="col-sm-12 col-lg-6 col-xl-4 blogItems p-4">
+                    <div class="image">
+                        <img src="../assets/img/news4.jpg" alt="">
+                        <div class="time">
+                            <p>12 فروردین</p>
+                        </div>
+                    </div>
+                    <div class="title">
+                        <h3>نحوه ایمپلنت دندان</h3>
+                    </div>
+                    <div class="comment-status">
+                        <svg class="comIcon" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 512 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path
+                                d="M256 448c141.4 0 256-93.1 256-208S397.4 32 256 32S0 125.1 0 240c0 45.1 17.7 86.8 47.7 120.9c-1.9 24.5-11.4 46.3-21.4 62.9c-5.5 9.2-11.1 16.6-15.2 21.6c-2.1 2.5-3.7 4.4-4.9 5.7c-.6 .6-1 1.1-1.3 1.4l-.3 .3 0 0 0 0 0 0 0 0c-4.6 4.6-5.9 11.4-3.4 17.4c2.5 6 8.3 9.9 14.8 9.9c28.7 0 57.6-8.9 81.6-19.3c22.9-10 42.4-21.9 54.3-30.6c31.8 11.5 67 17.9 104.1 17.9zM128 208a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm128 0a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm96 32a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z" />
+                        </svg>
+                        <p>نظری وجود ندارد</p>
+                    </div>
+                    <div class="detail">
+                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است
+                            چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است
+                        </p>
+                    </div>
+                    <div class="readMore">
+                        <a href="blog/blog-page.html">بیشتر بدانید</a>
+                        
+                    </div>
+                </div>
+                <div class="col-sm-12 col-lg-6 col-xl-4 blogItems p-4">
+                    <div class="image">
+                        <img src="../assets/img/news1.jpg" alt="">
+                        <div class="time">
+                            <p>12 فروردین</p>
+                        </div>
+                    </div>
+                    <div class="title">
+                        <h3>نحوه ایمپلنت دندان</h3>
+                    </div>
+                    <div class="comment-status">
+                        <svg class="comIcon" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 512 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path
+                                d="M256 448c141.4 0 256-93.1 256-208S397.4 32 256 32S0 125.1 0 240c0 45.1 17.7 86.8 47.7 120.9c-1.9 24.5-11.4 46.3-21.4 62.9c-5.5 9.2-11.1 16.6-15.2 21.6c-2.1 2.5-3.7 4.4-4.9 5.7c-.6 .6-1 1.1-1.3 1.4l-.3 .3 0 0 0 0 0 0 0 0c-4.6 4.6-5.9 11.4-3.4 17.4c2.5 6 8.3 9.9 14.8 9.9c28.7 0 57.6-8.9 81.6-19.3c22.9-10 42.4-21.9 54.3-30.6c31.8 11.5 67 17.9 104.1 17.9zM128 208a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm128 0a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm96 32a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z" />
+                        </svg>
+                        <p>نظری وجود ندارد</p>
+                    </div>
+                    <div class="detail">
+                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است
+                            چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است
+                        </p>
+                    </div>
+                    <div class="readMore">
+                        <a href="blog/blog-page.html">بیشتر بدانید</a>
+                        
+                    </div>
+                </div>
+                <div class="col-sm-12 col-lg-6 col-xl-4 blogItems p-4">
+                    <div class="image">
+                        <img src="../assets/img/news2.jpg" alt="">
+                        <div class="time">
+                            <p>12 فروردین</p>
+                        </div>
+                    </div>
+                    <div class="title">
+                        <h3>نحوه ایمپلنت دندان</h3>
+                    </div>
+                    <div class="comment-status">
+                        <svg class="comIcon" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 512 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path
+                                d="M256 448c141.4 0 256-93.1 256-208S397.4 32 256 32S0 125.1 0 240c0 45.1 17.7 86.8 47.7 120.9c-1.9 24.5-11.4 46.3-21.4 62.9c-5.5 9.2-11.1 16.6-15.2 21.6c-2.1 2.5-3.7 4.4-4.9 5.7c-.6 .6-1 1.1-1.3 1.4l-.3 .3 0 0 0 0 0 0 0 0c-4.6 4.6-5.9 11.4-3.4 17.4c2.5 6 8.3 9.9 14.8 9.9c28.7 0 57.6-8.9 81.6-19.3c22.9-10 42.4-21.9 54.3-30.6c31.8 11.5 67 17.9 104.1 17.9zM128 208a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm128 0a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm96 32a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z" />
+                        </svg>
+                        <p>نظری وجود ندارد</p>
+                    </div>
+                    <div class="detail">
+                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است
+                            چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است
+                        </p>
+                    </div>
+                    <div class="readMore">
+                        <a href="blog/blog-page.html">بیشتر بدانید</a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pagination-bar">
+            <div class="pagination">
+                <a style="font-size: 22px;" href="#">&raquo;</a>
+                <a href="#">1</a>
+                <a href="#" class="active">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <a style="font-size: 22px;" href="#">&laquo;</a>
+              </div>
+        </div>
+    </section>
+
+
+    <footer id="footer">
+        <div class="footerContainer">
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-xl-3 ">
+                    <div class="footerAbout">
+                        <h2>درباره ما</h2>
+                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است
+                        </p>
+                        <div class="footerSocial">
+                            <img src="../plugins/font-awesome/icons/facebook-f.svg" alt="">
+                            <img src="../plugins/font-awesome/icons/telegram.svg" alt="">
+                            <img src="../plugins/font-awesome/icons/whatsapp.svg" alt="">
+                            <img src="../plugins/font-awesome/icons/instagram.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-xl-3 ">
+                    <div class="footerExplor">
+                        <h2>کاوش کنید</h2>
+                        <div class="export-uls">
+                            <ul>
+                                <li><a href="#">درباره ما</a></li>
+                                <li><a href="#">سریس ها</a></li>
+                                <li><a href="#">گالری</a></li>
+                                <li><a href="#">قیمت ها</a></li>
+                                <li><a href="#">قوانین</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="#">مطب</a></li>
+                                <li><a href="#">خدمات ما</a></li>
+                                <li><a href="#">پشتیبانی</a></li>
+                                <li><a href="#">تماس با ما</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-xl-3 ">
+                    <div class="footerNews">
+                        <h2>آخرین اخبار</h2>
+                        <div class="newsItems">
+                            <div class="newsContent">
+                                <img src="../assets/img/n1.jpg" alt="">
+                                <div class="linkNews">
+                                    <p>12 فرووردین </p>
+                                    <a href="#">ما به دندان های شما اهمیت میدهیم</a>
+                                </div>
+                            </div>
+                            <div class="newsContent">
+                                <img src="../assets/img/n1.jpg" alt="">
+                                <div class="linkNews">
+                                    <p>12 فرووردین </p>
+                                    <a href="#">ما به دندان های شما اهمیت میدهیم</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-xl-3 ">
+                    <div class="footerContact">
+                        <h2>ارتباط با ما</h2>
+                        <div class="footerItems">
+                            <div>
+                                <img src="plugins/font-awesome/icons/location-dot-solid.svg" alt="">
+                                <p>شمهد ، بلوار مجد ، محد 26</p>
+                            </div>
+                            <div>
+                                <img src="plugins/font-awesome/icons/envelope-solid.svg" alt="">
+                                <p>info@gmail.com</p>
+                            </div>
+                            <div>
+                                <img src="plugins/font-awesome/icons/phone-solid.svg" alt="">
+                                <p>0513-2568-9687</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="../assets/js/aboutUs.js"></script>
+</body>
+
+</html>
